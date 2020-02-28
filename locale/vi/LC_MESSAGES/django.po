@@ -1,0 +1,422 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2019-08-27 17:16+0700\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: apps/users/auth.py:20
+msgid "Invalid token."
+msgstr ""
+
+#: apps/users/auth.py:25
+msgid "Token has expired"
+msgstr ""
+
+#: apps/users/auth.py:28
+msgid "User inactive or deleted."
+msgstr ""
+
+#: apps/users/models.py:28
+msgid "Key"
+msgstr ""
+
+#: apps/users/models.py:31
+msgid "User"
+msgstr ""
+
+#: apps/users/models.py:33 apps/users/models.py:58 apps/users/models.py:82
+msgid "Created"
+msgstr ""
+
+#: apps/users/models.py:53
+msgid "Reset token"
+msgstr ""
+
+#: apps/users/models.py:56 apps/users/models.py:80
+msgid "user"
+msgstr ""
+
+#: apps/users/models.py:77
+msgid "token"
+msgstr ""
+
+#: insecom/settings.py:130
+msgid "English"
+msgstr ""
+
+#: insecom/settings.py:131
+msgid "Viet Nam"
+msgstr ""
+
+#: templates/base.html:21 templates/index.html:21
+msgid "Insurance - Compare Insurance Policy Quotes - Life, Car, Health, Travel"
+msgstr "Hệ thống so sánh bảo hiểm"
+
+#: templates/base.html:88 templates/index.html:88
+msgid "About Us"
+msgstr "Về Chúng Tôi"
+
+#: templates/base.html:91 templates/index.html:91
+msgid "Claim Support"
+msgstr "Hỗ Trợ Bồi Thường"
+
+#: templates/base.html:97 templates/index.html:97
+msgid "Sign Up"
+msgstr "Đăng Ký"
+
+#: templates/base.html:100 templates/index.html:100
+msgid "Sign In"
+msgstr "Đăng Nhập"
+
+#: templates/base.html:134 templates/base.html:268 templates/base.html:334
+#: templates/base.html:498 templates/base.html:543 templates/base.html:703
+#: templates/base.html:857 templates/index.html:134 templates/index.html:267
+#: templates/index.html:333 templates/index.html:497 templates/index.html:542
+#: templates/index.html:702 templates/index.html:796 templates/index.html:803
+#: templates/index.html:810 templates/index.html:817 templates/index.html:824
+#: templates/index.html:1157
+msgid "Life Insurance"
+msgstr "Bảo Hiểm Nhân Thọ"
+
+#: templates/base.html:140 templates/base.html:340 templates/base.html:549
+#: templates/base.html:859 templates/index.html:140 templates/index.html:339
+#: templates/index.html:548 templates/index.html:795 templates/index.html:1159
+msgid "Term Product"
+msgstr "Sản Phẩm Tử Kỳ"
+
+#: templates/base.html:145 templates/base.html:346 templates/base.html:555
+#: templates/base.html:862 templates/index.html:145 templates/index.html:345
+#: templates/index.html:554 templates/index.html:802 templates/index.html:1162
+msgid "Investment Product"
+msgstr "Sản Phẩm Đầu Tư"
+
+#: templates/base.html:148 templates/base.html:351 templates/base.html:560
+#: templates/base.html:865 templates/index.html:148 templates/index.html:350
+#: templates/index.html:559 templates/index.html:809 templates/index.html:1165
+msgid "Saving Product"
+msgstr "Sản Phẩm Tích Luỹ"
+
+#: templates/base.html:151 templates/base.html:355 templates/base.html:564
+#: templates/base.html:868 templates/index.html:151 templates/index.html:354
+#: templates/index.html:563 templates/index.html:816 templates/index.html:1168
+msgid "Education Product"
+msgstr "Sản Phẩm Giáo Dục"
+
+#: templates/base.html:154 templates/base.html:360 templates/base.html:569
+#: templates/base.html:871 templates/index.html:154 templates/index.html:359
+#: templates/index.html:568 templates/index.html:823 templates/index.html:1171
+msgid "Pension Product"
+msgstr "Sản Phẩm Hưu Trí"
+
+#: templates/base.html:160 templates/base.html:270 templates/base.html:369
+#: templates/base.html:501 templates/base.html:578 templates/base.html:706
+#: templates/base.html:942 templates/index.html:160 templates/index.html:269
+#: templates/index.html:368 templates/index.html:500 templates/index.html:577
+#: templates/index.html:705 templates/index.html:831 templates/index.html:838
+#: templates/index.html:845 templates/index.html:852 templates/index.html:859
+#: templates/index.html:866 templates/index.html:1242
+msgid "Health Insurance"
+msgstr "Bảo Hiểm Sức Khoẻ"
+
+#: templates/base.html:167 templates/base.html:376 templates/base.html:585
+#: templates/base.html:944 templates/index.html:167 templates/index.html:375
+#: templates/index.html:584 templates/index.html:830 templates/index.html:1244
+msgid "Personal Health Insurance"
+msgstr "Bảo Hiểm Sức Khoẻ Cá Nhân"
+
+#: templates/base.html:172 templates/base.html:381 templates/base.html:590
+#: templates/base.html:947 templates/index.html:172 templates/index.html:380
+#: templates/index.html:589 templates/index.html:837 templates/index.html:1247
+msgid "Family Health Insurance"
+msgstr "Bảo Hiểm Sức Khoẻ Gia Đình, Nhóm"
+
+#: templates/base.html:175 templates/base.html:385 templates/base.html:594
+#: templates/base.html:950 templates/index.html:175 templates/index.html:384
+#: templates/index.html:593 templates/index.html:844 templates/index.html:1250
+msgid "Personal Accident Insurance"
+msgstr "Bảo Hiểm Tai Nạn Cá Nhân"
+
+#: templates/base.html:177 templates/base.html:389 templates/base.html:598
+#: templates/base.html:953 templates/index.html:177 templates/index.html:388
+#: templates/index.html:597 templates/index.html:851 templates/index.html:1253
+msgid "Hospital Cash Insurance"
+msgstr "Bảo Hiểm Trợ Cấp Y Tế, Nằm Viện"
+
+#: templates/base.html:180 templates/base.html:393 templates/base.html:602
+#: templates/base.html:956 templates/index.html:180 templates/index.html:392
+#: templates/index.html:601 templates/index.html:858 templates/index.html:1256
+msgid "Critical Illness Insurance"
+msgstr "Bảo Hiểm Bệnh Hiểm Nghèo"
+
+#: templates/base.html:182 templates/base.html:397 templates/base.html:606
+#: templates/base.html:959 templates/index.html:182 templates/index.html:396
+#: templates/index.html:605 templates/index.html:865 templates/index.html:1259
+msgid "Cancel Insurance"
+msgstr "Bảo Hiểm Bệnh Ung Thư"
+
+#: templates/base.html:186 templates/base.html:273 templates/base.html:403
+#: templates/base.html:504 templates/base.html:612 templates/base.html:709
+#: templates/index.html:186 templates/index.html:272 templates/index.html:402
+#: templates/index.html:503 templates/index.html:611 templates/index.html:708
+#: templates/index.html:881
+msgid "Car Insurance"
+msgstr "Bảo Hiểm Ô Tô"
+
+#: templates/base.html:190 templates/base.html:208 templates/base.html:408
+#: templates/base.html:427 templates/base.html:617 templates/base.html:636
+#: templates/index.html:190 templates/index.html:207 templates/index.html:407
+#: templates/index.html:426 templates/index.html:616 templates/index.html:635
+#: templates/index.html:872
+msgid "Compulsory Civil Liability Insurance"
+msgstr "Bảo Hiểm Trách Nhiệm Dân Sự Bắt Buộc"
+
+#: templates/base.html:194 templates/base.html:412 templates/base.html:621
+#: templates/index.html:194 templates/index.html:411 templates/index.html:620
+#: templates/index.html:880
+msgid "Physical Insurance"
+msgstr "Bảo Hiểm Vật Chất Xe"
+
+#: templates/base.html:197 templates/base.html:416 templates/base.html:431
+#: templates/base.html:625 templates/base.html:640 templates/index.html:197
+#: templates/index.html:415 templates/index.html:430 templates/index.html:624
+#: templates/index.html:639 templates/index.html:887
+msgid "Third Party Liability Insurance"
+msgstr "Bảo Hiểm Tai Nạn Lái Xe Và Người Ngồi Trên Xe"
+
+#: templates/base.html:204 templates/base.html:275 templates/base.html:423
+#: templates/base.html:507 templates/base.html:632 templates/base.html:712
+#: templates/index.html:203 templates/index.html:274 templates/index.html:422
+#: templates/index.html:506 templates/index.html:631 templates/index.html:711
+#: templates/index.html:895
+msgid "Two Wheeler Insurance"
+msgstr "Bảo Hiểm Xe Máy"
+
+#: templates/base.html:214 templates/base.html:436 templates/base.html:645
+#: templates/index.html:213 templates/index.html:435 templates/index.html:644
+#: templates/index.html:894
+msgid "Fire Insurance"
+msgstr "Bảo Hiểm Cháy Nổ"
+
+#: templates/base.html:221 templates/base.html:277 templates/base.html:441
+#: templates/base.html:511 templates/base.html:650 templates/base.html:716
+#: templates/index.html:220 templates/index.html:276 templates/index.html:440
+#: templates/index.html:510 templates/index.html:649 templates/index.html:715
+#: templates/index.html:901 templates/index.html:902
+msgid "Travel Insurance"
+msgstr "Bảo Hiểm Du Lịch"
+
+#: templates/base.html:225 templates/base.html:445 templates/base.html:654
+#: templates/base.html:1046 templates/index.html:224 templates/index.html:444
+#: templates/index.html:653 templates/index.html:1346
+msgid "Vietnam Travel Insurance"
+msgstr "Bảo Hiểm Du Lịch Việt Nam"
+
+#: templates/base.html:229 templates/base.html:449 templates/base.html:658
+#: templates/base.html:1049 templates/index.html:228 templates/index.html:448
+#: templates/index.html:657 templates/index.html:1349
+msgid "International Travel Insurance"
+msgstr "Bảo Hiểm Du Lịch Quốc Tế"
+
+#: templates/base.html:233 templates/base.html:453 templates/base.html:662
+#: templates/base.html:1052 templates/index.html:232 templates/index.html:452
+#: templates/index.html:661 templates/index.html:1352
+msgid "Flight Delay Insurance"
+msgstr "Bảo Hiểm Trễ Chuyến Bay"
+
+#: templates/base.html:237 templates/base.html:279 templates/base.html:459
+#: templates/base.html:514 templates/base.html:669 templates/base.html:719
+#: templates/base.html:1044 templates/index.html:236 templates/index.html:278
+#: templates/index.html:458 templates/index.html:513 templates/index.html:668
+#: templates/index.html:718 templates/index.html:1344
+msgid "Other Insurance "
+msgstr "Bảo Hiểm Khác"
+
+#: templates/base.html:241 templates/base.html:463 templates/base.html:674
+#: templates/base.html:1054 templates/index.html:240 templates/index.html:462
+#: templates/index.html:673 templates/index.html:1354
+msgid "Love Insurance"
+msgstr "Bảo Hiểm Tình Yêu"
+
+#: templates/base.html:245 templates/base.html:467 templates/base.html:677
+#: templates/base.html:1057 templates/index.html:244 templates/index.html:466
+#: templates/index.html:676 templates/index.html:909 templates/index.html:1357
+msgid "Credit Life Insurance"
+msgstr "Bảo Hiểm Tín Dụng"
+
+#: templates/base.html:249 templates/base.html:472 templates/base.html:681
+#: templates/base.html:1060 templates/index.html:248 templates/index.html:471
+#: templates/index.html:680 templates/index.html:916 templates/index.html:1360
+msgid "Home Insurance"
+msgstr "Bảo Hiểm Nhà Tư Nhân"
+
+#: templates/base.html:253 templates/base.html:476 templates/base.html:684
+#: templates/base.html:1063 templates/index.html:252 templates/index.html:475
+#: templates/index.html:683 templates/index.html:930 templates/index.html:1363
+msgid "Shipping Return Insurance"
+msgstr "Bảo Hiểm Trả Lại Hàng Ship"
+
+#: templates/base.html:257 templates/base.html:481 templates/base.html:688
+#: templates/base.html:1066 templates/index.html:256 templates/index.html:480
+#: templates/index.html:687 templates/index.html:923 templates/index.html:1366
+msgid "Smart Phone Screen Insurance"
+msgstr "Bảo Hiểm Màn Hình Điện Thoại"
+
+#: templates/base.html:263 templates/base.html:489 templates/base.html:695
+#: templates/index.html:262 templates/index.html:488 templates/index.html:694
+msgid "Glossary"
+msgstr "Kiến Thức"
+
+#: templates/base.html:266 templates/base.html:494 templates/base.html:699
+#: templates/index.html:265 templates/index.html:493 templates/index.html:698
+msgid "Insurance Glossary"
+msgstr "Kiến Thức Chung"
+
+#: templates/base.html:792 templates/index.html:1093
+msgid "OUR TRUSTED PARTNERS"
+msgstr "ĐỐI TÁC CỦA CHÚNG TÔI"
+
+#: templates/base.html:793 templates/index.html:1094
+msgid "including reputable insurance companies and leading brands in Vietnam"
+msgstr "Các công ty bảo hiểm uy tín và thương hiệu hàng đầu Việt Nam "
+
+#: templates/base.html:834 templates/index.html:1134
+msgid "The Main Products"
+msgstr "Các Sản Phẩm Chính"
+
+#: templates/base.html:998 templates/index.html:873 templates/index.html:888
+#: templates/index.html:1298
+msgid "Car, Two Wheeler Insurance"
+msgstr "Bảo Hiểm Ô Tô, Xe Máy"
+
+#: templates/base.html:1000 templates/index.html:1300
+msgid "Compulsory Civil Liability Car Insurance"
+msgstr "Bảo Hiểm Trách Nhiệm Dân Sự Bắt Buộc Ô Tô"
+
+#: templates/base.html:1003 templates/index.html:1303
+msgid "Physical Car Insurance"
+msgstr "Bảo Hiểm Vật Chất Xe Ô Tô"
+
+#: templates/base.html:1006 templates/index.html:1306
+msgid "Third Party Liability Car Insurance"
+msgstr "Bảo Hiểm Tai Nạn Lái Xe Và Người Ngồi Trên Xe Ô Tô"
+
+#: templates/base.html:1009 templates/index.html:1309
+msgid "Compulsory Civil Liability Two Wheeler Insurance"
+msgstr "Bảo Hiểm Trách Nhiệm Dân Sự Bắt Buộc Ô Tô Xe Máy"
+
+#: templates/base.html:1012 templates/index.html:1312
+msgid "Third Party Liability Two Wheeler Insurance"
+msgstr "Bảo Hiểm Tai Nạn Người Ngồi Trên Xe Máy"
+
+#: templates/base.html:1015 templates/index.html:1315
+msgid "Fire Two Wheeler Insurance"
+msgstr "Bảo Hiểm Cháy Nổ Xe Máy"
+
+#: templates/base.html:1188 templates/index.html:1488
+msgid "Payment Methods"
+msgstr "Phương Thức Thanh Toán Online"
+
+#: templates/index.html:782
+msgid "/static/images/enhead.png"
+msgstr "/static/images/vnhead.png"
+
+#: templates/index.html:786
+msgid "COMPARE THE INSURANCE PRODUCTS"
+msgstr "SO SÁNH CÁC SẢN PHẨM BẢO HIỂM"
+
+#: templates/index.html:787
+msgid ""
+"Sign up for Vnrobot for more online support and artificial intelligence "
+"robots!"
+msgstr ""
+"Đăng ký Vnrobot để có thêm tiện ích hỗ trợ trực tuyến và robot trí tuệ nhân "
+"tạo nhé !"
+
+#: templates/index.html:910 templates/index.html:917 templates/index.html:924
+#: templates/index.html:931
+msgid "Other Insurance"
+msgstr "Bảo Hiểm Khác"
+
+#: templates/index.html:940
+#, python-format
+msgid ""
+"\n"
+"            <img style=\"width: 100%%;\" src=\"/static/images/back2.png\" "
+"alt=\"\">\n"
+"            "
+msgstr ""
+"\n"
+"            <img style=\"width: 100%%;\" src=\"/static/images/back1.png\" "
+"alt=\"\">\n"
+"            "
+
+#: templates/index.html:948
+msgid "Sign up and it takes only 3 to 5 minutes for the robot to find you"
+msgstr "Đăng ký và chỉ 3 đến 5 phút robot sẽ tìm cho bạn "
+
+#: templates/index.html:949
+msgid "1 best and most suitable product for you !!"
+msgstr "1 sản phẩm tốt và phù hợp nhất với bạn nhé !!"
+
+#: templates/index.html:950
+msgid "GET STARTED"
+msgstr "BẮT ĐẦU"
+
+#: templates/index.html:954
+msgid "TOP THE BEST FAVORITE PRODUCTS"
+msgstr "TOP CÁC SẢN PHẨM ĐANG ĐƯỢC ƯA THÍCH NHẤT"
+
+#: templates/index.html:955
+msgid "Includes the most purchased products on vnrobot!"
+msgstr "Bao gồm các sản phẩm được mua nhiều nhất trên vnrobot!"
+
+#: templates/index.html:1019
+msgid "WHY PEOPLE LOVE VNROBOT"
+msgstr "TẠI SAO MỌI NGƯỜI YÊU THÍCH VNROBOT"
+
+#: templates/index.html:1020
+msgid ""
+"We are proud to be the number one e-commerce website in the insurance "
+"industry!"
+msgstr ""
+"Chúng tôi tự hào là website thương mại điện tử số 1 trong lĩnh vực bảo hiểm!"
+
+#: templates/index.html:1030 templates/index.html:1058
+msgid "SAVE MONEY"
+msgstr "TIẾT KIỆM CHI PHÍ"
+
+#: templates/index.html:1031 templates/index.html:1040
+#: templates/index.html:1050 templates/index.html:1059
+msgid ""
+"Buying and selling and selecting fees from many products and we have many "
+"products and we have many promotions from cost savings Online ..."
+msgstr ""
+"Mua bán và lựa chọn mức phí từ nhiều sản phẩm và chúng tôi có nhiều sản phẩm "
+"và chúng tôi có nhiều khuyến mại từ việc tiết kiệm chi phí Online...  "
+
+#: templates/index.html:1033 templates/index.html:1042
+#: templates/index.html:1052 templates/index.html:1061
+msgid "DETAIL"
+msgstr "XEM CHI TIẾT"
+
+#: templates/index.html:1039
+msgid "ARTIFICIAL INTELLIGENT "
+msgstr "TRÍ TUỆ NHÂN TẠO"
+
+#: templates/index.html:1049
+msgid "DEDICATED SUPPORT"
+msgstr "HỖ TRỢ TẬN TÌNH"

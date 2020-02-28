@@ -1,0 +1,357 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+    {% block cssblock %}
+    <link rel="stylesheet" href="{% static 'dashboard/bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{% static 'dashboard/bower_components/font-awesome/css/font-awesome.min.css' %}">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="{% static 'dashboard/bower_components/Ionicons/css/ionicons.min.css' %}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{% static 'dashboard/dist/css/AdminLTE.min.css' %}">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="{% static 'dashboard/dist/css/skins/_all-skins.min.css' %}">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="{% static 'dashboard/bower_components/morris.js/morris.css' %}">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="{% static 'dashboard/bower_components/jvectormap/jquery-jvectormap.css' %}">
+  <!-- Date Picker -->
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="{% static 'dashboard/bower_components/bootstrap-daterangepicker/daterangepicker.css' %}">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="{% static 'dashboard/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css' %}">
+        {% endblock %}
+
+
+    {% block content %}
+
+    <div class="row">
+   
+      <div class="col-xs-12">
+        <!-- interactive chart -->
+        <div class="box">
+          <div class="box-header with-border bg-purple">
+            <h3 class="box-title with-border">Tổng quan thu nhập</h3>
+          </div>
+          <!-- /.box-header -->
+          <div class="box-body">
+            <div class="col-xs-12">
+              <div class="row">
+                  <!-- /.box-header -->
+                  <div class="box-body">
+                    <table class="table table-bordered">
+                      <tbody>
+                        <tr>
+                        <th>
+                          <div class="row">
+                            <div class="col-sm-6">
+                                <label for="exampleInputEmail1">Chọn Tháng</label>
+                                <select name="month" id="Thang" class="form-control">
+                                    <option value="1">Tháng 1</option>
+                                    <option selected="" value="2">Tháng 2</option>
+                                    <option value="3">Tháng 3</option>
+                                    <option value="4">Tháng 4</option>
+                                    <option value="5">Tháng 5</option>
+                                    <option value="6">Tháng 6</option>
+                                    <option value="7">Tháng 7</option>
+                                    <option value="8">Tháng 8</option>
+                                    <option value="9">Tháng 9</option>
+                                    <option value="10">Tháng 10</option>
+                                    <option value="11">Tháng 11</option>
+                                    <option value="12">Tháng 12</option>
+                            </select>
+                            </div>
+                            <div class="col-sm-6">
+                                <label for="exampleInputEmail1">Chọn Năm</label>
+                                <select name="year" id="nam" class="form-control">
+                                    <option value="2019">2019</option>
+                                    <option selected="" value="2020">2020</option>
+                                    <option value="2021">2021</option>
+                                    <option value="2022">2022</option>
+                                    <option value="2023">2023</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                    <option value="2028">2028</option>
+                                    <option value="2029">2029</option>
+                                    <option value="2030">2030</option>
+                            </select>
+                            </div>
+
+                          </div>
+
+                        </th>
+                        <th><button type="button" class="btn btn-block btn-success" style="margin-top: 25px;">Bấm để xem</button></th>
+                      </tr>
+                      <tr>
+                       
+                        <td>Ngày báo cáo</td>
+                        <td>
+                          2/2/2020
+                        </td>
+                        
+                      </tr>
+                     
+                    </tbody></table>
+                  </div>
+                  <!-- /.box-body -->
+
+               
+        
+              </div>
+            </div>
+            <table class="table table-bordered">
+              <tbody><tr>
+                <th style="width: 10px">STT</th>
+                <th>Họ và tên</th>
+                <th>Mã user</th>
+                <th>Thời gian</th>
+                <th>Chức Vụ</th>
+                <th>Điểm cá nhân</th>
+                <th>Loại Thưởng</th>
+                <th>Kỳ thanh toán</th>
+                <th>Tiền thưởng bv</th>
+                <th>Tiền thưởng tích lũy</th>
+                <th>Tiền chờ ví ĐT</th>
+                <th>Tiền được rút</th>
+              </tr>
+             
+                <tr>
+                    <td>1.</td>
+                    <td>Lê Đình Thi</td>
+                    <td>
+                        BL001
+                    </td>
+                    <td>
+                      Tháng 1
+                    </td>
+                    <td>Cộng tác viên</td>
+                    <td>380BV</td>
+                    <td>Hoa hồng bán lẻ</td>
+                    <td>Tháng</td>
+                    <td>150BV</td>
+                    <td>0</td>
+                    <td><span class="badge bg-red">45BV</span></td>
+                    <td><span class="badge bg-green">0BV</span></td>
+                  </tr>
+                  <tr>
+                    <td>1.</td>
+                    <td>Lê Đình Thi</td>
+                    <td>
+                        BL001
+                    </td>
+                    <td>
+                      Tháng 1
+                    </td>
+                    <td>Cộng tác viên</td>
+                    <td>380BV</td>
+                    <td>Hoa hồng tuyển dụng</td>
+                    <td>Tháng</td>
+                    <td>150BV</td>
+                    <td>0</td>
+                    <td><span class="badge bg-red">45BV</span></td>
+                    <td><span class="badge bg-green">0BV</span></td>
+                  </tr>
+                  <tr>
+                    <td>1.</td>
+                    <td>Lê Đình Thi</td>
+                    <td>
+                        BL001
+                    </td>
+                    <td>
+                      Tháng 1
+                    </td>
+                    <td>Cộng tác viên</td>
+                    <td>380BV</td>
+                    <td>Hoa hồng tương trợ</td>
+                    <td>Năm</td>
+                    <td>150BV</td>
+                    <td>0</td>
+                    <td><span class="badge bg-red">45BV</span></td>
+                    <td><span class="badge bg-green">0BV</span></td>
+                  </tr>
+                  <tr>
+                    <td>1.</td>
+                    <td>Lê Đình Thi</td>
+                    <td>
+                        BL001
+                    </td>
+                    <td>
+                      Tháng 1
+                    </td>
+                    <td>Cộng tác viên</td>
+                    <td>380BV</td>
+                    <td>Hoa hồng nhóm</td>
+                    <td>Tháng</td>
+                    <td>150BV</td>
+                    <td>0</td>
+                    <td><span class="badge bg-red">45BV</span></td>
+                    <td><span class="badge bg-green">0BV</span></td>
+                  </tr>
+                  <tr>
+                    <td>1.</td>
+                    <td>Lê Đình Thi</td>
+                    <td>
+                        BL001
+                    </td>
+                    <td>
+                      Tháng 1
+                    </td>
+                    <td>Cộng tác viên</td>
+                    <td>380BV</td>
+                    <td>Hoa hồng cấp bậc</td>
+                    <td>Quý</td>
+                    <td>150BV</td>
+                    <td>0</td>
+                    <td><span class="badge bg-red">45BV</span></td>
+                    <td><span class="badge bg-green">0BV</span></td>
+                  </tr>
+                  <tr>
+                    <td>1.</td>
+                    <td>Lê Đình Thi</td>
+                    <td>
+                        BL001
+                    </td>
+                    <td>
+                      Tháng 1
+                    </td>
+                    <td>Cộng tác viên</td>
+                    <td>380BV</td>
+                    <td>Hoa hồng an sinh</td>
+                    <td>Tháng</td>
+                    <td>150BV</td>
+                    <td>300 BSF</td>
+                    <td><span class="badge bg-red">45BV</span></td>
+                    <td><span class="badge bg-green">0BV</span></td>
+                  </tr>
+                  <tr>
+                    <td>1.</td>
+                    <td>Lê Đình Thi</td>
+                    <td>
+                        BL001
+                    </td>
+                    <td>
+                      Tháng 1
+                    </td>
+                    <td>Cộng tác viên</td>
+                    <td>380BV</td>
+                    <td>Chương trình promotion</td>
+                    <td>Quý</td>
+                    <td>150BV</td>
+                    <td>0</td>
+                    <td><span class="badge bg-red">45BV</span></td>
+                    <td><span class="badge bg-green">0BV</span></td>
+                  </tr>
+                  <tr>
+                    <td>1.</td>
+                    <td><b>Tổng Thưởng</b></td>
+                    <td>
+                        
+                    </td>
+                    <td>
+                      <b>Tháng 1</b>
+                    </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td><b>150BV</b></td>
+                    <td><b></b></td>
+                    <td><span class="badge bg-red"><b>45BV</b></span></td>
+                    <td><span class="badge bg-green"><b>0BV</b></span></td>
+                  </tr>
+            </tbody></table><br>
+          </div>
+          <!-- /.box-body -->
+          <div class="box-footer clearfix">
+            <ul class="pagination pagination-sm no-margin pull-right">
+              <li><a href="#">«</a></li>
+              <li><a href="#">1</a></li>
+              <li><a href="#">2</a></li>
+              <li><a href="#">3</a></li>
+              <li><a href="#">»</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- /.box -->
+  
+      </div>
+      <!-- /.col -->
+    </div>
+
+
+    {% endblock %}
+
+<!-- jQuery 3 -->
+
+
+
+
+
+   {% block jsblock %}
+       <script src="{% static 'dashboard/bower_components/jquery/dist/jquery.min.js' %}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="{% static 'dashboard/bower_components/jquery-ui/jquery-ui.min.js' %}"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.7 -->
+<script src="{% static 'dashboard/bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<!-- Morris.js charts -->
+<script src="{% static 'dashboard/bower_components/raphael/raphael.min.js' %}"></script>
+<script src="{% static 'dashboard/bower_components/morris.js/morris.min.js' %}"></script>
+<!-- Sparkline -->
+<script src="{% static 'dashboard/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js' %}"></script>
+<!-- jvectormap -->
+<script src="{% static 'dashboard/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js' %}"></script>
+<script src="{% static 'dashboard/plugins/jvectormap/jquery-jvectormap-world-mill-en.js' %}"></script>
+<!-- jQuery Knob Chart -->
+<script src="{% static 'dashboard/bower_components/jquery-knob/dist/jquery.knob.min.js' %}"></script>
+<!-- daterangepicker -->
+<script src="{% static 'dashboard/bower_components/moment/min/moment.min.js' %}"></script>
+<script src="{% static 'dashboard/bower_components/bootstrap-daterangepicker/daterangepicker.js' %}"></script>
+<!-- datepicker -->
+<script src="{% static 'dashboard/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js' %}"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="{% static 'dashboard/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js' %}"></script>
+<!-- Slimscroll -->
+<script src="{% static 'dashboard/bower_components/jquery-slimscroll/jquery.slimscroll.min.js' %}"></script>
+<!-- FastClick -->
+<script src="{% static 'dashboard/bower_components/fastclick/lib/fastclick.js' %}"></script>
+<!-- AdminLTE App -->
+<script src="{% static 'dashboard/dist/js/adminlte.min.js' %}"></script>
+
+<!-- AdminLTE for demo purposes -->
+<script src="{% static 'dashboard/dist/js/demo.js' %}"></script>
+
+
+       <!-- FLOT CHARTS -->
+<script src="{% static 'dashboard/bower_components/Flot/jquery.flot.js' %}"></script>
+<!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+<script src="{% static 'dashboard/bower_components/Flot/jquery.flot.resize.js' %}"></script>
+<!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+<script src="{% static 'dashboard/bower_components/Flot/jquery.flot.pie.js' %}"></script>
+<!-- FLOT CATEGORIES PLUGIN - Used to draw bar charts -->
+<script src="{% static 'dashboard/bower_components/Flot/jquery.flot.categories.js' %}"></script>
+<!-- ChartJS -->
+
+ <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.js"></script>
+{#<script src="{% static 'dashboard/bower_components/chart.js/Chart.js' %}"></script>#}
+<script src="{% static 'dashboard/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js' %}"></script>
+<script src="{% static 'dashboard/plugins/jvectormap/jquery-jvectormap-world-mill-en.js' %}"></script>
+
+
+<script src="{% static 'dashboard/myscript/horizontal.js' %}"></script>
+     <script>
+
+
+       </script>
+
+        {% endblock %}
+
+
+
+

@@ -1,0 +1,472 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+    {% block cssblock %}
+    <link rel="stylesheet" href="{% static 'dashboard/bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{% static 'dashboard/bower_components/font-awesome/css/font-awesome.min.css' %}">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="{% static 'dashboard/bower_components/Ionicons/css/ionicons.min.css' %}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{% static 'dashboard/dist/css/AdminLTE.min.css' %}">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="{% static 'dashboard/dist/css/skins/_all-skins.min.css' %}">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="{% static 'dashboard/bower_components/morris.js/morris.css' %}">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="{% static 'dashboard/bower_components/jvectormap/jquery-jvectormap.css' %}">
+  <!-- Date Picker -->
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="{% static 'dashboard/bower_components/bootstrap-daterangepicker/daterangepicker.css' %}">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="{% static 'dashboard/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css' %}">
+    <!-- cây nhị gia phả -->
+  <link href="{% static 'dashboard/css-treeview/font-awesome.css' %}" rel="stylesheet" type="text/css">
+  <link href="{% static 'dashboard/css-treeview/cryptocoins.css' %}" rel="stylesheet" type="text/css">
+  <!-- DATA TABLES -->
+  <link href="{% static 'dashboard/css-treeview/dataTables.bootstrap.css' %}" rel="stylesheet" type="text/css">
+  <!-- Ionicons -->
+  <link href="{% static 'dashboard/css-treeview/ionicons.min.css' %}" rel="stylesheet" type="text/css">
+  <!-- Theme style -->
+  <link href="{% static 'dashboard/css-treeview/AdminLTE.css' %}" rel="stylesheet" type="text/css">
+  <script src="{% static 'dashboard/js-treeview/jquery.min.js' %}"></script>
+
+  <style>
+      .treeview-menu{
+          display: block;
+      }
+      .t-empty{
+          margin-left: 10px;
+          margin-top: 5px;
+      }
+    .tree .t-empty{width: 20px;height: 20px;background-color: #e8e7e7;float: left;color: #000000; font-weight: bold; text-align: center;line-height: 22px;font-size: 11px;border-radius: 50%;margin-right: 5px}
+    .tree .t-fill{width: 20px;height: 20px;background-color: #e8e7e7;float: left;color:#000000; font-weight: bold; text-align: center;line-height: 22px;font-size: 11px;border-radius: 50%;margin-right: 5px;margin-top: 4px;
+    margin-left: 10px;}
+</style>
+    {% endblock %}
+
+
+
+    {% block content %}
+    <div>
+        <div class="box-header with-border bg-purple">
+            <h3 class="box-title">Tổng Số : 12 Thành Viên</h3>
+            </div>
+            <!-- /.box-tools -->
+          </div>
+        <br>
+      <div class="cay">
+        <ul class="tree pl-0" style="list-style: none">
+            <li class="treeview">
+                <a class="showteam text-main" href="javascript:;" data-click="1" data-find="1" data-id="36">
+                  <img src="{% static 'dashboard/images/tree.png' %}" alt="">
+                        Lê Đình Thi                            </a>
+                <ul id="36" data-find="1" class="treeview-menu">
+                    <li>
+                        <a class="showteam text-main" href="javascript:;" data-id="855" data-view="tree" data-find="0">
+                          <img src="{% static 'dashboard/images/tree.png' %}" alt="" style="float: left;">
+                            <div class="t-fill">9</div>
+                            <span class="t-name">Nguyễn Thị Lan</span> -
+                            <span class="t-level">Cộng tác viên</span> - <span class="t-dsth">(DSTH: 986 BV)</span>
+                              <i style="color: #1aabd8" class="fa fa-info-circle"></i>
+                        </a>
+                        
+                        <ul id="855" data-find="1" data-click="0" style="display: none;">
+                            <li>
+                                <a class="showteam" href="javascript:User.showteam(1695,&#39;tree&#39;);" data-id="1695" data-view="tree" >
+                                  
+                                    <div class="t-fill" >13</div> <span class="t-name">Nguyễn Hoàng Hiệu</span> - <span class="t-level">Cộng tác viên</span> - <span class="t-dsth">(DSTH:986)</span></a> <a href="javascript:void(0)" onclick="showUserInfoModal(1695)"><i style="color: #1aabd8" class="fa fa-info-circle"></i></a>
+                                <ul id="1695" data-click="1" data-find="1" style="display: none;">
+                                    <li>
+                                        <a class="showteam" href="javascript:" data-id="3559" data-view="tree">
+                                          
+                                            <div class="t-empty">  0</div> <span class="t-name">Đỗ Thị Hằng</span> - <span class="t-level">Cộng tác viên</span> - <span class="t-dsth">(DSTH:379)</span></a> <a href="javascript:void(0)" onclick="showUserInfoModal(3559)"><i style="color: #1aabd8" class="fa fa-info-circle"></i></a>
+                                        <ul id="3559" data-click="0" data-find="0"> </ul>
+                                    </li>
+                                    <li>
+                                        <a class="showteam" href="javascript:" data-id="4625" data-view="tree">
+                                            <div class="t-empty">0</div> <span class="t-name">Đỗ Thành Tài</span> - <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH:0)</span></a> <a href="javascript:void(0)" onclick="showUserInfoModal(4625)"><i class="fa fa-info-circle"></i></a>
+                                        <ul id="4625" data-click="0" data-find="0"> </ul>
+                                    </li>
+                                    <li>
+                                        <a class="showteam" href="javascript:" data-id="4641" data-view="tree">
+                                            <div class="t-empty">0</div> <span class="t-name">Le Vo Set Lay</span> - <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH:0)</span></a> <a href="javascript:void(0)" onclick="showUserInfoModal(4641)"><i class="fa fa-info-circle"></i></a>
+                                        <ul id="4641" data-click="0" data-find="0"> </ul>
+                                    </li>
+                                    <li>
+                                        <a class="showteam" href="javascript:" data-id="4647" data-view="tree">
+                                            <div class="t-empty">0</div> <span class="t-name">Nông Thị Hương</span> - <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH:0)</span></a> <a href="javascript:void(0)" onclick="showUserInfoModal(4647)"><i class="fa fa-info-circle"></i></a>
+                                        <ul id="4647" data-click="0" data-find="0"> </ul>
+                                    </li>
+                                    <li>
+                                        <a class="showteam" href="javascript:" data-id="4649" data-view="tree">
+                                            <div class="t-empty">0</div> <span class="t-name">Phí Quang Hiếu</span> - <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH:0)</span></a> <a href="javascript:void(0)" onclick="showUserInfoModal(4649)"><i class="fa fa-info-circle"></i></a>
+                                        <ul id="4649" data-click="0" data-find="0"> </ul>
+                                    </li>
+                                    <li>
+                                        <a class="showteam" href="javascript:" data-id="4650" data-view="tree">
+                                            <div class="t-empty">0</div> <span class="t-name"> Nguyễn Thị Tuyết Dương</span> - <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH:0)</span></a> <a href="javascript:void(0)" onclick="showUserInfoModal(4650)"><i class="fa fa-info-circle"></i></a>
+                                        <ul id="4650" data-click="0" data-find="0"> </ul>
+                                    </li>
+                                    <li>
+                                        <a class="showteam" href="javascript:" data-id="4651" data-view="tree">
+                                            <div class="t-empty">0</div> <span class="t-name">Trương Lê Minh</span> - <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH:0)</span></a> <a href="javascript:void(0)" onclick="showUserInfoModal(4651)"><i class="fa fa-info-circle"></i></a>
+                                        <ul id="4651" data-click="0" data-find="0"> </ul>
+                                    </li>
+                                    <li>
+                                        <a class="showteam" href="javascript:" data-id="4652" data-view="tree">
+                                            <div class="t-empty">0</div> <span class="t-name">Nguyễn Duyên Bích Thuỷ</span> - <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH:0)</span></a> <a href="javascript:void(0)" onclick="showUserInfoModal(4652)"><i class="fa fa-info-circle"></i></a>
+                                        <ul id="4652" data-click="0" data-find="0"> </ul>
+                                    </li>
+                                    <li>
+                                        <a class="showteam" href="javascript:" data-id="4653" data-view="tree">
+                                            <div class="t-empty">0</div> <span class="t-name">Võ Đức Nhật</span> - <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH:0)</span></a> <a href="javascript:void(0)" onclick="showUserInfoModal(4653)"><i class="fa fa-info-circle"></i></a>
+                                        <ul id="4653" data-click="0" data-find="0"> </ul>
+                                    </li>
+                                    <li>
+                                        <a class="showteam" href="javascript:" data-id="4654" data-view="tree">
+                                            <div class="t-empty">0</div> <span class="t-name">Phạm Duy Khương</span> - <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH:0)</span></a> <a href="javascript:void(0)" onclick="showUserInfoModal(4654)"><i class="fa fa-info-circle"></i></a>
+                                        <ul id="4654" data-click="0" data-find="0"> </ul>
+                                    </li>
+                                    <li>
+                                        <a class="showteam" href="javascript:" data-id="4690" data-view="tree">
+                                            <div class="t-empty">0</div> <span class="t-name">Phan Thị Huế</span> - <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH:0)</span></a> <a href="javascript:void(0)" onclick="showUserInfoModal(4690)"><i class="fa fa-info-circle"></i></a>
+                                        <ul id="4690" data-click="0" data-find="0"> </ul>
+                                    </li>
+                                    <li>
+                                        <a class="showteam" href="javascript:" data-id="4691" data-view="tree">
+                                            <div class="t-empty">0</div> <span class="t-name">Vũ Thị Ngọc Hà</span> - <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH:0)</span></a> <a href="javascript:void(0)" onclick="showUserInfoModal(4691)"><i class="fa fa-info-circle"></i></a>
+                                        <ul id="4691" data-click="0" data-find="0"> </ul>
+                                    </li>
+                                    <li>
+                                        <a class="showteam" href="javascript:" data-id="4698" data-view="tree">
+                                            <div class="t-empty">0</div> <span class="t-name">Nguyễn Văn Cường</span> - <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH:0)</span></a> <a href="javascript:void(0)" onclick="showUserInfoModal(4698)"><i class="fa fa-info-circle"></i></a>
+                                        <ul id="4698" data-click="0" data-find="0"> </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="showteam" href="javascript:" data-id="5666" data-view="tree">
+                                    <div class="t-empty">0</div> <span class="t-name">Trần thị thuỷ</span> - <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH:0)</span></a> <a href="javascript:void(0)" onclick="showUserInfoModal(5666)"><i class="fa fa-info-circle"></i></a>
+                                <ul id="5666" data-click="0" data-find="0"> </ul>
+                            </li>
+                            <li>
+                                <a class="showteam" href="javascript:" data-id="4462" data-view="tree">
+                                    <div class="t-empty">0</div> <span class="t-name">Triệu Anh Minh</span> - <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH:0)</span></a> <a href="javascript:void(0)" onclick="showUserInfoModal(4462)"><i class="fa fa-info-circle"></i></a>
+                                <ul id="4462" data-click="0" data-find="0"> </ul>
+                            </li>
+                            <li>
+                                <a class="showteam" href="javascript:" data-id="4463" data-view="tree">
+                                    <div class="t-empty">0</div> <span class="t-name">Khúc Hương Thu</span> - <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH:0)</span></a> <a href="javascript:void(0)" onclick="showUserInfoModal(4463)"><i class="fa fa-info-circle"></i></a>
+                                <ul id="4463" data-click="0" data-find="0"> </ul>
+                            </li>
+                            <li>
+                                <a class="showteam" href="javascript:" data-id="4464" data-view="tree">
+                                    <div class="t-empty">0</div> <span class="t-name">Nguyễn Văn Khải</span> - <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH:0)</span></a> <a href="javascript:void(0)" onclick="showUserInfoModal(4464)"><i class="fa fa-info-circle"></i></a>
+                                <ul id="4464" data-click="0" data-find="0"> </ul>
+                            </li>
+                            <li>
+                                <a class="showteam" href="javascript:" data-id="4566" data-view="tree">
+                                    <div class="t-empty">0</div> <span class="t-name">Nguyễn Ánh Hồng</span> - <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH:0)</span></a> <a href="javascript:void(0)" onclick="showUserInfoModal(4566)"><i class="fa fa-info-circle"></i></a>
+                                <ul id="4566" data-click="0" data-find="0"> </ul>
+                            </li>
+                            <li>
+                                <a class="showteam" href="javascript:" data-id="5591" data-view="tree">
+                                    <div class="t-empty">0</div> <span class="t-name">Nguyễn Viết Lan</span> - <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH:0)</span></a> <a href="javascript:void(0)" onclick="showUserInfoModal(5591)"><i class="fa fa-info-circle"></i></a>
+                                <ul id="5591" data-click="0" data-find="0"> </ul>
+                            </li>
+                            <li>
+                                <a class="showteam" href="javascript:" data-id="4568" data-view="tree">
+                                    <div class="t-empty">0</div> <span class="t-name">Lệ Quyên </span> - <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH:0)</span></a> <a href="javascript:void(0)" onclick="showUserInfoModal(4568)"><i class="fa fa-info-circle"></i></a>
+                                <ul id="4568" data-click="0" data-find="0"> </ul>
+                            </li>
+                            <li>
+                                <a class="showteam" href="javascript:" data-id="1757" data-view="tree">
+                                    <div class="t-empty">0</div> <span class="t-name">Dương Thị Ngọc Lan</span> - <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH:0)</span></a> <a href="javascript:void(0)" onclick="showUserInfoModal(1757)"><i class="fa fa-info-circle"></i></a>
+                                <ul id="1757" data-click="0" data-find="0"> </ul>
+                            </li>
+                        </ul>
+                    </li>
+    
+                    <li>
+                        <a class="showteam text-main" href="javascript:;" data-id="61" data-view="tree" data-find="0">
+                            
+                            <img src="{% static 'dashboard/images/tree.png' %}" alt="" style="float: left;">
+                            <div class="t-empty">0</div>
+                            <span class="t-name">Nguyễn Văn Sáu</span> -
+                            <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH: 0 BV)</span>
+                            <i style="" class="fa fa-info-circle"></i>
+                        </a>
+                    </li>
+    
+                    <li>
+                        <a class="showteam text-main" href="javascript:;" data-id="847" data-view="tree" data-find="0">
+                           
+                            <img src="{% static 'dashboard/images/tree.png' %}" alt="" style="float: left;">
+                            <div class="t-empty">0</div>
+                            <span class="t-name">Bùi Thị Định</span> -
+                            <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH: 0 BV)</span>
+                            <i style="" class="fa fa-info-circle"></i>
+                        </a>
+  
+                           
+  
+                    </li>
+    
+                    <li>
+                        <a class="showteam text-main" href="javascript:;" data-id="46418" data-view="tree" data-find="0">
+                           
+                            <img src="{% static 'dashboard/images/tree.png' %}" alt="" style="float: left;">
+                            <div class="t-empty">0</div>
+                            <span class="t-name">Nguyễn Huy Bay</span> -
+                            <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH: 0 BV)</span>
+                            <i style="" class="fa fa-info-circle"></i>
+                        </a>
+                        <!-- <a href="javascript:void(0)" onclick="showUserInfoModal(&#39;46418&#39;)">
+                            
+    
+                        </a> -->
+                    </li>
+    
+                    <li>
+                        <a class="showteam text-main" href="javascript:;" data-id="605" data-view="tree" data-find="0">
+                            
+                            <img src="{% static 'dashboard/images/tree.png' %}" alt="" style="float: left;">
+                            <div class="t-empty">0</div>
+                            <span class="t-name">Nguyễn Thị Thủy </span> -
+                            <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH: 0 BV)</span>
+                            <i style="" class="fa fa-info-circle"></i>
+                        </a>
+                        <!-- <a href="javascript:void(0)" onclick="showUserInfoModal(&#39;605&#39;)">
+                            
+    
+                        </a> -->
+                    </li>
+    
+                    <li>
+                        <a class="showteam text-main" href="javascript:;" data-id="609" data-view="tree" data-find="0">
+                            
+                            <img src="{% static 'dashboard/images/tree.png' %}" alt="" style="float: left;">
+                            <div class="t-empty">0</div>
+                            <span class="t-name">Lê Văn Tiến</span> -
+                            <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH: 0 BV)</span>
+                            <i style="" class="fa fa-info-circle"></i>
+                        </a>
+                        <!-- <a href="javascript:void(0)" onclick="showUserInfoModal(&#39;609&#39;)">
+                            
+    
+                        </a> -->
+                    </li>
+    
+                    <li>
+                        <a class="showteam text-main" href="javascript:;" data-id="126" data-view="tree" data-find="0">
+                           
+                            <img src="{% static 'dashboard/images/tree.png' %}" alt="" style="float: left;">
+                            <div class="t-empty">0</div>
+                            <span class="t-name">Lê Văn Tiến</span> -
+                            <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH: 0 BV)</span>
+                            <i style="" class="fa fa-info-circle"></i>
+                        </a>
+                        <!-- <a href="javascript:void(0)" onclick="showUserInfoModal(&#39;126&#39;)">
+                            
+    
+                        </a> -->
+                    </li>
+    
+                    <li>
+                        <a class="showteam text-main" href="javascript:;" data-id="639" data-view="tree" data-find="0">
+                           
+                            <img src="{% static 'dashboard/images/tree.png' %}" alt="" style="float: left;">
+                            <div class="t-empty">0</div>
+                            <span class="t-name">Nguyễn Xuân Mậu</span> -
+                            <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH: 0 BV)</span>
+                            <i style="" class="fa fa-info-circle"></i>
+    
+                        </a>
+                        <!-- <a href="javascript:void(0)" onclick="showUserInfoModal(&#39;639&#39;)">
+                            
+                        </a> -->
+                    </li>
+    
+                    <li>
+                        <a class="showteam text-main" href="javascript:;" data-id="640" data-view="tree" data-find="0">
+                            
+                            <img src="{% static 'dashboard/images/tree.png' %}" alt="" style="float: left;">
+                            <div class="t-empty">0</div>
+                            <span class="t-name">Lê Hoàng Anh Tuấn</span> -
+                            <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH: 0 BV)</span>
+                            <i style="" class="fa fa-info-circle"></i>
+                        </a>
+                        <!-- <a href="javascript:void(0)" onclick="showUserInfoModal(&#39;640&#39;)">
+                            
+    
+                        </a> -->
+                    </li>
+    
+                    <li>
+                        <a class="showteam text-main" href="javascript:;" data-id="642" data-view="tree" data-find="0">
+                           
+                            <img src="{% static 'dashboard/images/tree.png' %}" alt="" style="float: left;">
+                            <div class="t-empty">0</div>
+                            <span class="t-name">Kiều Hưng</span> -
+                            <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH: 0 BV)</span>
+                            <i style="" class="fa fa-info-circle"></i>
+                        </a>
+                        <!-- <a href="javascript:void(0)" onclick="showUserInfoModal(&#39;642&#39;)">
+                            
+    
+                        </a> -->
+                    </li>
+    
+                    <li>
+                        <a class="showteam text-main" href="javascript:;" data-id="645" data-view="tree" data-find="0">
+                            
+                            <img src="{% static 'dashboard/images/tree.png' %}" alt="" style="float: left;">
+                            <div class="t-empty">0</div>
+                            <span class="t-name">Nguyễn Thị Ngọc Thủy</span> -
+                            <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH: 0 BV)</span>
+                            <i style="" class="fa fa-info-circle"></i>
+                        </a>
+                        <!-- <a href="javascript:void(0)" onclick="showUserInfoModal(&#39;645&#39;)">
+                            
+    
+                        </a> -->
+                    </li>
+    
+                    <li>
+                        <a class="showteam text-main" href="javascript:;" data-id="46485" data-view="tree" data-find="0">
+                            
+                            <img src="{% static 'dashboard/images/tree.png' %}" alt="" style="float: left;">
+                            <div class="t-empty">0</div>
+                            <span class="t-name">Nguyễn Thị Ngọc</span> -
+                            <span class="t-level">Thành viên</span> - <span class="t-dsth">(DSTH: 0 BV)</span>
+                            <i style="" class="fa fa-info-circle"></i>
+                        </a>
+                        <!-- <a href="javascript:void(0)" onclick="showUserInfoModal(&#39;46485&#39;)">
+                            
+    
+                        </a> -->
+                    </li>
+    
+                </ul>
+            </li>
+        </ul>
+      </div>
+  </div>
+      
+    {% endblock %}
+
+
+
+
+
+
+   {% block jsblock %}
+
+   <script>
+    var User = {
+        showteam: function (id, v) {
+
+            if ($('#' + id).attr('data-find') != 1) {
+                $('#' + id).show();
+                $.ajax({
+                    type: "POST", url: "/user/ajaxteam", data: "id=" + id + "&view=" + v, success: function (answer) {
+                        $("#" + id).attr('data-find', 1);
+                        $("#" + id + "").fadeIn();
+                        $("#" + id + "").html(answer);
+                    }
+                });
+            } else {
+                if ($('#' + id).attr('data-click') != 1) {
+                    $('#' + id).attr('data-click', 1);
+                    $('#' + id).show();
+                } else {
+                    $('#' + id).attr('data-click', 0);
+                    $('#' + id).hide(500);
+                }
+            }
+        }
+    }
+    $(".showteam").click(function () {
+        var id = $(this).attr("data-id");
+        User.showteam(id, 1)
+    })
+    function showUserInfoModal(id) {
+        $('#modalinfocontent').html('Loading...');
+        $('#usermodalinfo').modal('show');
+        $.get('/user/referrer_logic_info/' + id, {}, function (res) {
+            $('#modalinfocontent').html(res);
+        });
+        return false;
+    }
+</script>
+
+       <script src="{% static 'dashboard/bower_components/jquery/dist/jquery.min.js' %}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="{% static 'dashboard/bower_components/jquery-ui/jquery-ui.min.js' %}"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.7 -->
+<script src="{% static 'dashboard/bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<!-- Morris.js charts -->
+<script src="{% static 'dashboard/bower_components/raphael/raphael.min.js' %}"></script>
+<script src="{% static 'dashboard/bower_components/morris.js/morris.min.js' %}"></script>
+<!-- Sparkline -->
+<script src="{% static 'dashboard/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js' %}"></script>
+<!-- jvectormap -->
+<script src="{% static 'dashboard/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js' %}"></script>
+<script src="{% static 'dashboard/plugins/jvectormap/jquery-jvectormap-world-mill-en.js' %}"></script>
+<!-- jQuery Knob Chart -->
+<script src="{% static 'dashboard/bower_components/jquery-knob/dist/jquery.knob.min.js' %}"></script>
+<!-- daterangepicker -->
+<script src="{% static 'dashboard/bower_components/moment/min/moment.min.js' %}"></script>
+<script src="{% static 'dashboard/bower_components/bootstrap-daterangepicker/daterangepicker.js' %}"></script>
+<!-- datepicker -->
+<script src="{% static 'dashboard/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js' %}"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="{% static 'dashboard/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js' %}"></script>
+<!-- Slimscroll -->
+<script src="{% static 'dashboard/bower_components/jquery-slimscroll/jquery.slimscroll.min.js' %}"></script>
+<!-- FastClick -->
+<script src="{% static 'dashboard/bower_components/fastclick/lib/fastclick.js' %}"></script>
+<!-- AdminLTE App -->
+<script src="{% static 'dashboard/dist/js/adminlte.min.js' %}"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+
+<script src="{% static 'dashboard/dist/js/demo.js' %}"></script>
+
+
+       <!-- FLOT CHARTS -->
+<script src="{% static 'dashboard/bower_components/Flot/jquery.flot.js' %}"></script>
+<!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+<script src="{% static 'dashboard/bower_components/Flot/jquery.flot.resize.js' %}"></script>
+<!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+<script src="{% static 'dashboard/bower_components/Flot/jquery.flot.pie.js' %}"></script>
+<!-- FLOT CATEGORIES PLUGIN - Used to draw bar charts -->
+<script src="{% static 'dashboard/bower_components/Flot/jquery.flot.categories.js' %}"></script>
+<!-- ChartJS -->
+<script src="{% static 'dashboard/bower_components/chart.js/Chart.js' %}"></script>
+<script src="{% static 'dashboard/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js' %}"></script>
+<script src="{% static 'dashboard/plugins/jvectormap/jquery-jvectormap-world-mill-en.js' %}"></script>
+<script src="{% static 'dashboard/myscript/new_agent.js' %}"></script>
+
+<script src="{% static 'dashboard/js-treeview/moment.min.js' %}"></script>
+<!-- AdminLTE App -->
+<script src="{% static 'dashboard/js-treeview/app.js' %}" type="text/javascript"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="{% static 'dashboard/js-treeview/demo.js' %}" type="text/javascript"></script>
+<script>
+    jQuery(document).ready(function($) {var url = window.location.pathname,
+        urlRegExp = new RegExp(url.replace(/\/$/,'') + "$");
+        $(".treeview-menu li a").each(function() { if(urlRegExp=='/$/') $(this).addClass("");
+        else {if(urlRegExp.test(this.href.replace(/\/$/,''))) {$(this).addClass("active");}}});});
+</script>
+
+   {% endblock %}
+
+
+
+

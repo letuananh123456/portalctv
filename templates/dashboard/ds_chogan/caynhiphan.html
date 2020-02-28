@@ -1,0 +1,302 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+    {% block cssblock %}
+    <link rel="stylesheet" href="{% static 'dashboard/bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{% static 'dashboard/bower_components/font-awesome/css/font-awesome.min.css' %}">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="{% static 'dashboard/bower_components/Ionicons/css/ionicons.min.css' %}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{% static 'dashboard/dist/css/AdminLTE.min.css' %}">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="{% static 'dashboard/dist/css/skins/_all-skins.min.css' %}">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="{% static 'dashboard/bower_components/morris.js/morris.css' %}">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="{% static 'dashboard/bower_components/jvectormap/jquery-jvectormap.css' %}">
+  <!-- Date Picker -->
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="{% static 'dashboard/bower_components/bootstrap-daterangepicker/daterangepicker.css' %}">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="{% static 'dashboard/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css' %}">
+  <style>
+    .network-tree-panel .network-tree-stucture li a.user-packet {
+        position: relative;
+        display: inline-block;
+        min-width: 70px;
+        min-height: 60px;
+        background-image: url({% static 'dashboard/images/BLVN.png' %});
+        background-repeat: no-repeat;
+        background-size: 70%;
+        overflow-x:auto;
+    }
+    .box .box-body {
+        -webkit-border-top-left-radius: 0;
+        -webkit-border-top-right-radius: 0;
+        -webkit-border-bottom-right-radius: 1px;
+        -webkit-border-bottom-left-radius: 1px;
+        -moz-border-radius-topleft: 0;
+        -moz-border-radius-topright: 0;
+        -moz-border-radius-bottomright: 1px;
+        -moz-border-radius-bottomleft: 1px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 1px;
+        border-bottom-left-radius: 1px;
+    }
+    .network-tree-panel .network-tree-stucture {
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px;
+    }
+    .network-tree-panel .network-tree-stucture ul {
+        padding-top: 6px;
+        position: relative;
+
+        width: 100%;
+    }
+    .network-tree-panel .network-tree-stucture li:only-child {
+        padding-top: 0;
+    }
+    .network-tree-panel .network-tree-stucture > ul > li {
+        width: 100%;
+    }
+    .network-tree-panel .network-tree-stucture li {
+        float: left;
+        text-align: center;
+        list-style-type: none;
+        position: relative;
+
+        width: 50%;
+    }
+    .ptree .user-name {
+        color: #000;
+        cursor: pointer;
+        font-size: 11px;
+    }
+    .network-tree-panel .network-tree-stucture li {
+        float: left;
+        text-align: center;
+        list-style-type: none;
+        position: relative;
+        width: 50%;
+    }
+    .network-tree-panel .network-tree-stucture ul {
+        padding-top: 6px;
+        position: relative;
+        width: 100%;
+    }
+    .network-tree-panel .network-tree-stucture li:only-child {
+        padding-top: 0;
+    }
+    .network-tree-panel .network-tree-stucture > ul > li {
+        width: 100%;
+    }
+    .network-tree-panel .network-tree-stucture li {
+        float: left;
+        text-align: center;
+        list-style-type: none;
+        position: relative;
+        width: 50%;
+    }
+    .network-tree-panel .network-tree-stucture li:before, .network-tree-panel .network-tree-stucture li:after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 50%;
+        border-top: 1px solid #ffc107;
+        width: 50%;
+        height: 6px;
+    }
+    .network-tree-panel .network-tree-stucture li:after {
+        right: auto;
+        left: 50%;
+        border-left: 1px solid #ffc107;
+    }
+    .network-tree-panel .network-tree-stucture li:last-child::before {
+        border-right: 1px solid #ffc107;
+    }
+    .network-tree-panel .network-tree-stucture li {
+        float: left;
+        text-align: center;
+        list-style-type: none;
+        position: relative;
+        padding: 10px 0 0;
+        width: 50%;
+    } 
+    .network-tree-panel .network-tree-stucture > ul > li {
+        width: 100%;
+    }
+    .network-tree-panel .network-tree-stucture li {
+        float: left;
+        text-align: center;
+        list-style-type: none;
+        position: relative;
+        padding: 10px 0 0;
+        width: 50%;
+    }
+    .network-tree-panel .network-tree-stucture li:first-child::before, .network-tree-panel .network-tree-stucture li:last-child::after {
+         border: 0 none;
+    }
+    </style>
+    {% endblock %}
+
+
+
+    {% block content %}
+    <div class="row">
+   
+        <div class="col-xs-12">
+          <!-- interactive chart -->
+          <div class="box">
+            <div class="box-header with-border bg-purple">
+              <h3 class="box-title with-border">Cây Nhị Phân</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+  
+              <div class="network-tree-panel">
+                  <div class="ptree" id="ptree">
+                      <div class="network-tree-stucture" id="tree">
+                        <script>
+                            var data = [
+                             { id: 1, parent: null, pos: '', content: 'thi' },
+                             { id: 2, parent: 1, pos: 'left', content: 'a' },
+                             { id: 3, parent: 1, pos: 'right', content: 'b' },
+                             { id: 4, parent: 2, pos: 'left', content: 'grand child' },
+                             { id: 5, parent: 2, pos: 'right', content: 'grand child' },
+                             { id: 6, parent: 3, pos: 'left', content: 'grand child' },
+                             { id: 7, parent: 3, pos: 'right', content: 'grand child' },
+                             { id: 8, parent: 4, pos: 'left', content: 'grand child' },
+                             { id: 9, parent: 4, pos: 'right', content: 'grand child' },
+                             { id: 10, parent: 5, pos: 'left', content: 'grand child' },
+                             { id: 11, parent: 5, pos: 'right', content: 'grand child' },
+                             { id: 12, parent: 6, pos: 'left', content: 'grand child' },
+                             { id: 13, parent: 6, pos: 'right', content: 'grand child' },
+                             { id: 12, parent: 7, pos: 'left', content: 'grand child' },
+                             { id: 13, parent: 7, pos: 'right', content: 'grand child' },
+                             { id: 12, parent: 8, pos: 'left', content: 'grand child' },
+                             { id: 13, parent: 8, pos: 'right', content: 'grand child' },
+                         ];
+                         
+                         function tree(parent, level) {
+                         
+                             function findRow(p, pos) {
+                                 var id;
+                                 data.some(function (r, i) {
+                                     return r.parent === p && r.pos === pos ? (id = i, true) : false;
+                                 });
+                                 return id;
+                             }
+                         
+                             function procRow(r) {
+                                 
+                                 document.write('<li data-branch='+data[r].pos+'>');
+                                 document.write('<span class="inline-block relative">');
+                                 document.write('<a class="free product-4 user-packet" href="javascript:void(0)">');
+                                 document.write('</a>');
+                                 document.write('<div data-uid="609" class="user-name click_on_name" data-href="/user/referrer_logic/609">');
+                                 document.write(data[r].content );
+                                 tree(data[r].id, level + 1);
+                                 document.write('</div>');
+                                 document.write('</span>');
+                                 document.write('</li>');
+                             }
+                         
+                             document.write('<ul>');
+                             ['', 'left', 'right'].forEach(function (l) {
+                                 var row = findRow(parent, l);
+                                 data[row] && procRow(row);
+                             });
+                             document.write('</ul>');
+                         }
+                         tree(null, 0); 
+                            </script>
+                      </div>
+                  </div>
+              </div>
+          </div>
+  
+  
+  
+          </div>
+          <!-- /.box -->
+    
+        </div>
+        <!-- /.col -->
+      </div>
+    {% endblock %}
+
+
+
+
+    <!-- var x = document.getElementsByClassName("dname");
+    x.innerHTML = -->
+
+   {% block jsblock %}
+ 
+       <script src="{% static 'dashboard/bower_components/jquery/dist/jquery.min.js' %}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="{% static 'dashboard/bower_components/jquery-ui/jquery-ui.min.js' %}"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.7 -->
+<script src="{% static 'dashboard/bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<!-- Morris.js charts -->
+<script src="{% static 'dashboard/bower_components/raphael/raphael.min.js' %}"></script>
+<script src="{% static 'dashboard/bower_components/morris.js/morris.min.js' %}"></script>
+<!-- Sparkline -->
+<script src="{% static 'dashboard/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js' %}"></script>
+<!-- jvectormap -->
+<script src="{% static 'dashboard/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js' %}"></script>
+<script src="{% static 'dashboard/plugins/jvectormap/jquery-jvectormap-world-mill-en.js' %}"></script>
+<!-- jQuery Knob Chart -->
+<script src="{% static 'dashboard/bower_components/jquery-knob/dist/jquery.knob.min.js' %}"></script>
+<!-- daterangepicker -->
+<script src="{% static 'dashboard/bower_components/moment/min/moment.min.js' %}"></script>
+<script src="{% static 'dashboard/bower_components/bootstrap-daterangepicker/daterangepicker.js' %}"></script>
+<!-- datepicker -->
+<script src="{% static 'dashboard/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js' %}"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="{% static 'dashboard/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js' %}"></script>
+<!-- Slimscroll -->
+<script src="{% static 'dashboard/bower_components/jquery-slimscroll/jquery.slimscroll.min.js' %}"></script>
+<!-- FastClick -->
+<script src="{% static 'dashboard/bower_components/fastclick/lib/fastclick.js' %}"></script>
+<!-- AdminLTE App -->
+<script src="{% static 'dashboard/dist/js/adminlte.min.js' %}"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+
+<script src="{% static 'dashboard/dist/js/demo.js' %}"></script>
+
+
+       <!-- FLOT CHARTS -->
+<script src="{% static 'dashboard/bower_components/Flot/jquery.flot.js' %}"></script>
+<!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+<script src="{% static 'dashboard/bower_components/Flot/jquery.flot.resize.js' %}"></script>
+<!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+<script src="{% static 'dashboard/bower_components/Flot/jquery.flot.pie.js' %}"></script>
+<!-- FLOT CATEGORIES PLUGIN - Used to draw bar charts -->
+<script src="{% static 'dashboard/bower_components/Flot/jquery.flot.categories.js' %}"></script>
+<!-- ChartJS -->
+<script src="{% static 'dashboard/bower_components/chart.js/Chart.js' %}"></script>
+<script src="{% static 'dashboard/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js' %}"></script>
+<script src="{% static 'dashboard/plugins/jvectormap/jquery-jvectormap-world-mill-en.js' %}"></script>
+
+
+<script src="{% static 'dashboard/myscript/new_agent.js' %}"></script>
+
+       <script>
+
+
+       </script>
+   {% endblock %}
+
+
+
+

@@ -1,0 +1,285 @@
+{% extends 'dashboard/base.html' %}
+{% load static %}
+
+    {% block cssblock %}
+    <link rel="stylesheet" href="{% static 'dashboard/bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="{% static 'dashboard/bower_components/font-awesome/css/font-awesome.min.css' %}">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="{% static 'dashboard/bower_components/Ionicons/css/ionicons.min.css' %}">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="{% static 'dashboard/dist/css/AdminLTE.min.css' %}">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="{% static 'dashboard/dist/css/skins/_all-skins.min.css' %}">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="{% static 'dashboard/bower_components/morris.js/morris.css' %}">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="{% static 'dashboard/bower_components/jvectormap/jquery-jvectormap.css' %}">
+  <!-- Date Picker -->
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="{% static 'dashboard/bower_components/bootstrap-daterangepicker/daterangepicker.css' %}">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="{% static 'dashboard/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css' %}">
+
+    {% endblock %}
+
+
+
+    {% block content %}
+    <div class="row">
+   
+        <div class="col-xs-12">
+          <!-- interactive chart -->
+          <div class="box">
+            <div class="box-header with-borderbtn btn-github">
+              <h3 class="box-title with-border">Danh sách nhóm phải</h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+              <div class="col-xs-12">
+                <div class="row">
+          
+                  <div class="col-xs-3">
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">User Id</label>
+                      <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Nhập User id">
+                    </div>
+                  </div>
+          
+                  <div class="col-xs-2">
+                    <div class="form-group">
+                      <label>Chức vụ</label>
+                      <select name="level" class="form-control">
+                        <option value="">-Tất cả--</option>
+                        <option value="0">Thành viên</option>
+                        <option value="1">Cộng tác viên - CTV</option>
+                        <option value="2">Chuyên viên - CV</option>
+                        <option value="3">Chuyên viên cấp cao - CVCC</option>
+                        <option value="4">Trưởng phòng - TP</option>
+                        <option value="5">Trưởng phòng cấp cao - TPCC</option>
+                        <option value="6">Giám đốc - GĐ</option>
+                        <option value="7">Giám đốc cấp cao - GĐCC</option>
+                        <option value="8">Giám đốc khu vực - GĐKV</option>
+                        <option value="9">Giám đốc miền - GĐM</option>
+                        <option value="10">Bàn tròn triệu phú - BTTP</option>
+                    </select>
+                    </div>
+                  </div>
+          
+                  <div class="col-xs-2">
+                    <div class="form-group">
+                      <label>Khu vực</label>
+                      <select name="city" class="form-control">
+                        <option selected="selected" value="0">--Chọn tỉnh thành--</option>
+                                                            <option value="Hà Nội">Hà Nội</option>
+                                                            <option value="TP HCM">TP HCM</option>
+                                                            <option value="An Giang">An Giang</option>
+                                                            <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+                                                            <option value="Bắc Giang">Bắc Giang</option>
+                                                            <option value="Bắc Kạn">Bắc Kạn</option>
+                                                            <option value="Bạc Liêu">Bạc Liêu</option>
+                                                            <option value="Bắc Ninh">Bắc Ninh</option>
+                                                            <option value="Bến Tre">Bến Tre</option>
+                                                            <option value="Bình Định">Bình Định</option>
+                                                            <option value="Bình Dương">Bình Dương</option>
+                                                            <option value="Bình Phước">Bình Phước</option>
+                                                            <option value="Bình Thuận">Bình Thuận</option>
+                                                            <option value="Cà Mau">Cà Mau</option>
+                                                            <option value="Cao Bằng">Cao Bằng</option>
+                                                            <option value="Đắk Lắk">Đắk Lắk</option>
+                                                            <option value="Đắk Nông">Đắk Nông</option>
+                                                            <option value="Điện Biên">Điện Biên</option>
+                                                            <option value="Đồng Nai">Đồng Nai</option>
+                                                            <option value="Đồng Tháp">Đồng Tháp</option>
+                                                            <option value="Gia Lai">Gia Lai</option>
+                                                            <option value="Hà Giang">Hà Giang</option>
+                                                            <option value="Hà Nam">Hà Nam</option>
+                                                            <option value="Hà Tĩnh">Hà Tĩnh</option>
+                                                            <option value="Hải Dương">Hải Dương</option>
+                                                            <option value="Hậu Giang">Hậu Giang</option>
+                                                            <option value="Hòa Bình">Hòa Bình</option>
+                                                            <option value="Hưng Yên">Hưng Yên</option>
+                                                            <option value="Khánh Hòa">Khánh Hòa</option>
+                                                            <option value="Kiên Giang">Kiên Giang</option>
+                                                            <option value="Kon Tum">Kon Tum</option>
+                                                            <option value="Lai Châu">Lai Châu</option>
+                                                            <option value="Lâm Đồng">Lâm Đồng</option>
+                                                            <option value="Lạng Sơn">Lạng Sơn</option>
+                                                            <option value="Lào Cai">Lào Cai</option>
+                                                            <option value="Long An">Long An</option>
+                                                            <option value="Nam Định">Nam Định</option>
+                                                            <option value="Nghệ An">Nghệ An</option>
+                                                            <option value="Ninh Bình">Ninh Bình</option>
+                                                            <option value="Ninh Thuận">Ninh Thuận</option>
+                                                            <option value="Phú Thọ">Phú Thọ</option>
+                                                            <option value="Quảng Bình">Quảng Bình</option>
+                                                            <option value="Quảng Nam">Quảng Nam</option>
+                                                            <option value="Quảng Ngãi">Quảng Ngãi</option>
+                                                            <option value="Quảng Ninh">Quảng Ninh</option>
+                                                            <option value="Quảng Trị">Quảng Trị</option>
+                                                            <option value="Sóc Trăng">Sóc Trăng</option>
+                                                            <option value="Sơn La">Sơn La</option>
+                                                            <option value="Tây Ninh">Tây Ninh</option>
+                                                            <option value="Thái Bình">Thái Bình</option>
+                                                            <option value="Thái Nguyên">Thái Nguyên</option>
+                                                            <option value="Thanh Hóa">Thanh Hóa</option>
+                                                            <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
+                                                            <option value="Tiền Giang">Tiền Giang</option>
+                                                            <option value="Trà Vinh">Trà Vinh</option>
+                                                            <option value="Tuyên Quang">Tuyên Quang</option>
+                                                            <option value="Vĩnh Long">Vĩnh Long</option>
+                                                            <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                                                            <option value="Yên Bái">Yên Bái</option>
+                                                            <option value="Phú Yên">Phú Yên</option>
+                                                            <option value="Cần Thơ">Cần Thơ</option>
+                                                            <option value="Đà Nẵng">Đà Nẵng</option>
+                                                            <option value="Hải Phòng">Hải Phòng</option>
+                                                    </select>
+                    </div>
+                  </div>
+                  <div class="col-xs-2">
+                    <div class="form-group">
+                      <label>Vị Trí</label>
+                      <select name="level" class="form-control">
+                        <option value="0">Phải</option>               
+                    </select>
+                    </div>
+                  </div>
+                  <div class="col-xs-2">
+                    <br>
+                    <button type="button" class="btn btn-success" style="font-size: 16px;margin-top: 2px;">Tìm Kiếm</button>
+                  </div>
+          
+                </div>
+              </div>
+              <p>Tổng số: 12 thành viên</p>
+              <table class="table table-bordered">
+                <tbody><tr>
+                  <th style="width: 10px">STT</th>
+                  <th>Họ và tên</th>
+                  <th>User Id</th>
+                  <th>Điện thoại</th>
+                  <th>Khu vực</th>
+                  <th>Bv Tích Lũy</th>
+                  <th>Doanh Số trực hệ</th>
+                  <th>Vị Trí</th>
+                  <th>Chức vụ</th>
+                  <th>Người tuyển dụng</th>
+                </tr>
+                <tr>
+                  <td>1.</td>
+                  <td>Update software</td>
+                  <td>
+                    <div class="progress progress-xs">
+                      <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="progress progress-xs">
+                      <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="progress progress-xs">
+                      <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+                    </div>
+                  </td>
+                  <td>
+                    <div class="progress progress-xs">
+                      <div class="progress-bar progress-bar-danger" style="width: 55%"></div>
+                    </div>
+                  </td>
+                  <td><span class="badge bg-red">55%</span></td>
+                  <td><span class="badge bg-red">55%</span></td>
+                  <td><span class="badge bg-red">55%</span></td>
+                  <td><span class="badge bg-red">55%</span></td>
+                </tr>
+              </tbody></table><br>
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer clearfix">
+              <ul class="pagination pagination-sm no-margin pull-right">
+                <li><a href="#">«</a></li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">»</a></li>
+              </ul>
+            </div>
+          </div>
+          <!-- /.box -->
+    
+        </div>
+        <!-- /.col -->
+      </div>
+    {% endblock %}
+
+
+
+
+
+
+   {% block jsblock %}
+       <script src="{% static 'dashboard/bower_components/jquery/dist/jquery.min.js' %}"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="{% static 'dashboard/bower_components/jquery-ui/jquery-ui.min.js' %}"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.7 -->
+<script src="{% static 'dashboard/bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+<!-- Morris.js charts -->
+<script src="{% static 'dashboard/bower_components/raphael/raphael.min.js' %}"></script>
+<script src="{% static 'dashboard/bower_components/morris.js/morris.min.js' %}"></script>
+<!-- Sparkline -->
+<script src="{% static 'dashboard/bower_components/jquery-sparkline/dist/jquery.sparkline.min.js' %}"></script>
+<!-- jvectormap -->
+<script src="{% static 'dashboard/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js' %}"></script>
+<script src="{% static 'dashboard/plugins/jvectormap/jquery-jvectormap-world-mill-en.js' %}"></script>
+<!-- jQuery Knob Chart -->
+<script src="{% static 'dashboard/bower_components/jquery-knob/dist/jquery.knob.min.js' %}"></script>
+<!-- daterangepicker -->
+<script src="{% static 'dashboard/bower_components/moment/min/moment.min.js' %}"></script>
+<script src="{% static 'dashboard/bower_components/bootstrap-daterangepicker/daterangepicker.js' %}"></script>
+<!-- datepicker -->
+<script src="{% static 'dashboard/bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js' %}"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="{% static 'dashboard/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js' %}"></script>
+<!-- Slimscroll -->
+<script src="{% static 'dashboard/bower_components/jquery-slimscroll/jquery.slimscroll.min.js' %}"></script>
+<!-- FastClick -->
+<script src="{% static 'dashboard/bower_components/fastclick/lib/fastclick.js' %}"></script>
+<!-- AdminLTE App -->
+<script src="{% static 'dashboard/dist/js/adminlte.min.js' %}"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+
+<script src="{% static 'dashboard/dist/js/demo.js' %}"></script>
+
+
+       <!-- FLOT CHARTS -->
+<script src="{% static 'dashboard/bower_components/Flot/jquery.flot.js' %}"></script>
+<!-- FLOT RESIZE PLUGIN - allows the chart to redraw when the window is resized -->
+<script src="{% static 'dashboard/bower_components/Flot/jquery.flot.resize.js' %}"></script>
+<!-- FLOT PIE PLUGIN - also used to draw donut charts -->
+<script src="{% static 'dashboard/bower_components/Flot/jquery.flot.pie.js' %}"></script>
+<!-- FLOT CATEGORIES PLUGIN - Used to draw bar charts -->
+<script src="{% static 'dashboard/bower_components/Flot/jquery.flot.categories.js' %}"></script>
+<!-- ChartJS -->
+<script src="{% static 'dashboard/bower_components/chart.js/Chart.js' %}"></script>
+<script src="{% static 'dashboard/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js' %}"></script>
+<script src="{% static 'dashboard/plugins/jvectormap/jquery-jvectormap-world-mill-en.js' %}"></script>
+
+
+<script src="{% static 'dashboard/myscript/new_agent.js' %}"></script>
+
+       <script>
+
+
+       </script>
+   {% endblock %}
+
+
+
+

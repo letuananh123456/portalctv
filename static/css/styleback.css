@@ -1,0 +1,546 @@
+
+.third-level-menu
+{
+    position: absolute;
+    top: 0;
+    right: -150px;
+    /*width: 150px;*/
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.third-level-menu > li
+{
+    height: 30px;
+    background: #999999;
+}
+.third-level-menu > li:hover { background: #CCCCCC; }
+
+.second-level-menu
+{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.second-level-menu > li
+{
+    position: relative;
+    height: 30px;
+    background: #999999;
+}
+.second-level-menu > li:hover { background: #CCCCCC; }
+
+.top-level-menu
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-level-menu > li
+{
+    position: relative;
+    float: left;
+    height: 30px;
+    width: 150px;
+    background: #999999;
+}
+.top-level-menu > li:hover { background: #CCCCCC; }
+
+.top-level-menu li:hover > ul
+{
+    /* On hover, display the next level's menu */
+    display: inline;
+}
+
+
+/* Menu Link Styles */
+
+.top-level-menu a /* Apply to all links inside the multi-level menu */
+{
+    font: bold 14px Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0 0 0 10px;
+
+    /* Make the link cover the entire list item-container */
+    display: block;
+    line-height: 30px;
+}
+.top-level-menu a:hover { color: #000000; }
+
+.menu-nav{
+    background-color: #ccc;
+}
+
+.mainText {
+    text-align: center;
+    padding: 30px;
+}
+
+.plan--wrapper {
+    background: #F2F2F2;
+    padding-bottom: 60px;
+}
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+@media (min-width: 991px)
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.plan {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 15px 0 15px;
+    float: left;
+}
+
+.planItem {
+    width: 24%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px;
+    background: white;
+    border: 2px solid #1CA0A4;
+    margin-bottom: 14px;
+    height: 110px;
+    transition: 0.5s;
+    border-radius: 10px;
+    padding-left: 25px;
+}
+
+.planItem:hover {
+    background-color: #1CA0A4;
+    color: #FFF;
+}
+.planItem img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+img {
+    border-style: none;
+}
+
+.planItem__text a {
+    font-size: 17px;
+    display: block;
+    text-transform: capitalize;
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: 'SF-UI-Display-Thin';
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+.planItem__text span {
+    font-size: 14px;
+    display: block;
+    color: #475665;
+    text-transform: capitalize;
+    text-align: left;
+    font-family: 'SF-UI-Display-Thin';
+}
+
+.background-dangky {
+    position: relative;
+    height: 300px;
+    background-color: #d2eced;
+}
+
+.box-br {
+    position: absolute;
+    width: 400px;
+    border: 2px solid #1CA0A4;
+    top: -30px;
+    right: 10%;
+    width: 80%;
+    transition: 0.5s;
+    border-radius: 10px;
+    text-align: center;
+    height: 217px;
+    background-color: #fff;
+    padding: 30px;
+}
+
+.box-br h3{
+
+    color: #05564f;
+}
+
+.texth3{
+    margin-bottom: 25px;
+}  
+.bton-start {
+    background-color: #077e9e;
+    border-radius: 6px;
+    padding: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+    color: #FFF !important; 
+    font-size: 20px !important;
+
+}
+
+.bton-start:hover{
+    background-color: #2197b7;
+}
+
+.menu-nav{
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.container-fluid{
+    padding: 0px;
+}
+
+.box-product{
+    border: 2px solid #1CA0A4;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+    background: #FFF;
+    z-index: 99;
+    border-radius: 14px;
+
+}
+
+.contact {
+    border-bottom: 1px solid #1ca0a4;
+    margin-bottom: 70px;
+    padding-bottom: 20px;
+}
+
+.contact h2 {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 600;
+    display: inline-block;
+    background: #1CA0A4;
+    padding: 6px 30px;
+    margin-bottom: 20px;
+    box-shadow: 10px 7px 0 #475665;
+    font-family: 'SF-UI-Display-Thin';
+}
+
+.contact--inner {
+    display: flex;
+    margin-bottom: 10px;
+}
+.contact--inner .left {
+    width: 45%;
+    border-right: 1px solid #475665;
+}
+
+.contact--inner .right {
+    width: 55%;
+    padding-left: 20px;
+}
+.contact--inner input {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 10px;
+    background: #f1f0f0;
+    font-family: 'SF-UI-Display-Light';
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+.contact--inner textarea {
+    height: 100px;
+    width: 100%;
+    background: #f1f0f0;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+textarea {
+    overflow: auto;
+}
+
+.footer {
+    background-color: #475665;
+    color: #fff;
+    padding-bottom: 300px;
+}
+
+.footer--inner {
+    padding: 10px;
+}
+
+@media (max-width: 991px) and (min-width: 451px)
+.footerColumn:not(:last-child) {
+    width: 33.3333% !important;
+}
+
+.footerColumn:not(:last-child) {
+    width: 21%;
+}
+.footerColumn {
+    float: left;
+}
+
+.footer__title {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 16px 0;
+    font-family: 'SF-UI-Display-Thin';
+}
+
+.footerColumn__item {
+    margin-bottom: 16px;
+}
+
+.copyRight {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    color: #D0D0D0;
+    font-family: 'SF-UI-Display-Light';
+}
+
+.help {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    background-color: #1CA0A4;
+    color: #fff;
+    font-size: 19px;
+    font-family: 'SF-UI-Display-Thin';
+    padding: 8.5px 69px;
+    letter-spacing: 0.6px;
+}
+.footerForm {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.footerColumn__link {
+    font-size: 16px;
+    line-height: 26px;
+    font-family: 'SF-UI-Display-Light';
+    color: white;
+}
+
+.socialIcon svg {
+    height: 25px;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.footer a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+/*.socialIcon ul li{
+    float: left;
+}*/
+
+@media only screen and (max-width: 1024px)
+.madeEasy, .testimonials, .ourpartner, .groupCompanie, .mobileApp, .investor, .moreInsurance, .footerLegal {
+    height: auto;
+    padding: 5% 0 7%;
+}
+
+.footerLegal {
+    width: 100%;
+    background-size: 100%;
+    background: #000000;
+    display: table;
+    padding: 10px 0;
+}
+
+.ptable {
+    vertical-align: middle;
+    display: table-cell;
+}
+.footerLegal .footer_title {
+    margin: 10px 0 30px;
+}
+.footerLegal .info {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.36);
+    text-align: center;
+}
+
+.footerLegal .info.mt15 {
+    margin: 15px 2px 7px 0;
+}
+
+.paymentOption .logo.visa {
+    background-position: -731px -838px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25), not all, not all, not all, only screen and (min-resolution: 200dpi), only screen and (min-resolution: 1.25dppx)
+.paymentOption .logo {
+    background-size: 1115px 1100px;
+}
+.paymentOption .logo {
+    width: 12%;
+    height: 30px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 5px 4px;
+    border: solid 0.6px #dedfdf;
+    background: #ffffff url(../../images/home-v1/logos@1x.png?v=3) 0 0 no-repeat;
+    font-size: 0px;
+    max-width: 60px;
+    background-color: #fff !important;
+    background-size: 1115px 1100px;
+}
+
+.footerLegal .footer_title .h2 {
+    font-size: 18px;
+    color: #ffffff;
+    justify-content: center;
+    display: flex;
+}
+
+.paymentOption .logo.american {
+    background-position: -658px -838px;
+}
+
+.paymentOption .logo.netbanking {
+    background-position: -941px -838px;
+}
+
+.footerLegal .footer_title {
+    margin: 10px 0 30px;
+}
+
+.paymentOption {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    justify-content: center;
+}
+
+.footerForm input {
+    float: left;
+    background: none;
+    border: 1px solid #707070;
+    padding: 15px 12px;
+    max-width: 348px;
+    width: 100%;
+}
+.footerForm button svg {
+    width: 35px;
+    height: 35px;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.socialIcon li {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.box-review{
+    height: 400px;
+    background-color: #59babd;
+}
+
+.sub-box{
+    height: 300px;
+    border: 2px solid #1CA0A4;
+    border-radius: 30px;
+    background: #FFF;
+
+}
+
+.box-re{
+    padding-top: 46px;
+}
+
+.uathich-logo {
+    border: 2px solid #1CA0A4;
+    border-radius: 22%;
+    width: 181px;
+    height: 133px;
+    position: absolute;
+    top: -58px;
+    left: 26%;
+    z-index: -1;
+    padding-left: 50px;
+    padding-top: 10px;
+
+}
+
+.main-like{
+    margin-bottom: 45px;
+}
+
+.mar-like{
+    margin-top: 60px;
+}
+
+.relati{
+    position: relative;
+}
+
+.img-company-logo{
+
+    width: 60%;
+    height: 30%;
+}
+
+.box-product:hover{
+    background-color: #1CA0A4;
+    color: #FFF;
+
+}
+.planItem:hover .span-bv{
+    color: #FFF;
+}
+
+.planItem:hover a{
+    color: #FFF;
+}
+
+.planItem i {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    font-size: 40px;
+}

@@ -1,0 +1,36 @@
+.carousel-item{
+    padding-left: 40px;
+    padding-bottom: 20px;
+}
+.custom-control{
+   margin-bottom: 15px;
+}
+.carousel-item h2{
+    text-align: center;
+    color: #252733;
+    font-size: 26px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.container{
+    width: 80%;
+}
+.modal-header>p{
+    width: 100%;
+    float: left;
+    text-align: center;
+    font-size: 13px;
+    color: #5d6068;
+    line-height: 16px;
+    margin: 20px 0 0;
+    padding: 0 0 16px;
+    box-sizing: border-box;
+    border-bottom: 1px dashed #ccc;
+    font-weight: 400;
+}
+.modal-header{
+    border: none;
+}
+.modal-footer{
+    color: #ffffff;
+}

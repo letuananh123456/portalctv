@@ -1,0 +1,1927 @@
+
+.third-level-menu
+{
+    position: absolute;
+    top: 0;
+    right: -150px;
+    /*width: 150px;*/
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.third-level-menu > li
+{
+    height: 30px;
+    background: #999999;
+}
+.third-level-menu > li:hover { background: #CCCCCC; }
+
+.second-level-menu
+{
+    position: absolute;
+    top: 30px;
+    left: 0;
+    width: 150px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+}
+
+.second-level-menu > li
+{
+    position: relative;
+    height: 30px;
+    background: #999999;
+}
+.second-level-menu > li:hover { background: #CCCCCC; }
+
+.top-level-menu
+{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.top-level-menu > li
+{
+    position: relative;
+    float: left;
+    height: 30px;
+    width: 150px;
+    background: #999999;
+}
+.top-level-menu > li:hover { background: #CCCCCC; }
+
+.top-level-menu li:hover > ul
+{
+    /* On hover, display the next level's menu */
+    display: inline;
+}
+
+
+/* Menu Link Styles */
+
+.top-level-menu a /* Apply to all links inside the multi-level menu */
+{
+    font: bold 14px Arial, Helvetica, sans-serif;
+    color: #FFFFFF;
+    text-decoration: none;
+    padding: 0 0 0 10px;
+
+    /* Make the link cover the entire list item-container */
+    display: block;
+    line-height: 30px;
+}
+.top-level-menu a:hover { color: #000000; }
+
+.menu-nav{
+	background-color: #ccc;
+}
+
+.mainText {
+    text-align: center;
+    padding: 30px;
+}
+
+.plan--wrapper {
+    background: #F2F2F2;
+    padding-bottom: 60px;
+}
+.container {
+    max-width: 1200px;
+    width: 100%;
+    margin: auto;
+}
+
+@media (min-width: 991px)
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.plan {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px 15px 0 15px;
+    float: left;
+}
+
+.planItem {
+    width: 24%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 8px;
+    background: white;
+    border: 2px solid #1CA0A4;
+    margin-bottom: 14px;
+    height: 110px;
+    transition: 0.5s;
+    border-radius: 10px;
+    padding-left: 25px;
+}
+
+.planItem:hover {
+	background-color: #1CA0A4;
+	color: #FFF;
+}
+.planItem img {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+}
+img {
+    border-style: none;
+}
+
+.planItem__text a {
+    font-size: 17px;
+    display: block;
+    text-transform: capitalize;
+    text-align: left;
+    margin-bottom: 10px;
+    font-family: 'SF-UI-Display-Thin';
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+.planItem__text span {
+    font-size: 14px;
+    display: block;
+    color: #475665;
+    text-transform: capitalize;
+    text-align: left;
+    font-family: 'SF-UI-Display-Thin';
+}
+
+.background-dangky {
+	position: relative;
+	height: 300px;
+	background-color: #d2eced;
+}
+
+.box-br {
+	position: absolute;
+	width: 400px;
+	border: 2px solid #1CA0A4;
+	top: -30px;
+	right: 10%;
+    width: 80%;
+    transition: 0.5s;
+    border-radius: 10px;
+    text-align: center;
+    height: 217px;
+    background-color: #fff;
+    padding: 30px;
+}
+
+.box-br h3{
+
+	color: #05564f;
+}
+
+.texth3{
+	margin-bottom: 25px;
+}  
+.bton-start {
+	background-color: #077e9e;
+	border-radius: 6px;
+    padding: 10px;
+    padding-left: 60px;
+    padding-right: 60px;
+    color: #FFF !important; 
+    font-size: 20px !important;
+    
+
+}
+
+.bton-start:hover{
+	background-color: #2197b7;
+	cursor: pointer;
+
+}
+
+.menu-nav{
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.container-fluid{
+	padding: 0px;
+}
+
+.box-product{
+	border: 2px solid #1CA0A4;
+	padding: 20px;
+	text-align: center;
+	margin-bottom: 10px;
+	background: #FFF;
+	z-index: 99;
+	border-radius: 14px;
+
+}
+
+.contact {
+    border-bottom: 1px solid #1ca0a4;
+    margin-bottom: 70px;
+    padding-bottom: 20px;
+}
+
+.contact h2 {
+    font-size: 30px;
+    color: #fff;
+    font-weight: 600;
+    display: inline-block;
+    background: #1CA0A4;
+    padding: 6px 30px;
+    margin-bottom: 20px;
+    box-shadow: 10px 7px 0 #475665;
+    font-family: 'SF-UI-Display-Thin';
+}
+
+.contact--inner {
+    display: flex;
+    margin-bottom: 10px;
+}
+.contact--inner .left {
+    width: 45%;
+    border-right: 1px solid #475665;
+}
+
+.contact--inner .right {
+    width: 55%;
+    padding-left: 20px;
+}
+.contact--inner input {
+    width: 100%;
+    height: 35px;
+    margin-bottom: 10px;
+    background: #f1f0f0;
+    font-family: 'SF-UI-Display-Light';
+    border: none;
+    padding: 10px;
+    outline: none;
+}
+
+.contact--inner textarea {
+    height: 100px;
+    width: 100%;
+    background: #f1f0f0;
+    border: none;
+    outline: none;
+    padding: 10px;
+}
+
+textarea {
+    overflow: auto;
+}
+
+.footer {
+    background-color: #475665;
+    color: #fff;
+    padding-bottom: 300px;
+}
+
+.footer--inner {
+    padding: 10px;
+}
+
+@media (max-width: 991px) and (min-width: 451px)
+.footerColumn:not(:last-child) {
+    width: 33.3333% !important;
+}
+
+.footerColumn:not(:last-child) {
+    width: 21%;
+}
+.footerColumn {
+    float: left;
+}
+
+.footer__title {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin: 16px 0;
+    font-family: 'SF-UI-Display-Thin';
+}
+
+.footerColumn__item {
+    margin-bottom: 16px;
+}
+
+.copyRight {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    color: #D0D0D0;
+    font-family: 'SF-UI-Display-Light';
+}
+
+.help {
+    position: fixed;
+    bottom: 10px;
+    right: 20px;
+    background-color: #1CA0A4;
+    color: #fff;
+    font-size: 19px;
+    font-family: 'SF-UI-Display-Thin';
+    padding: 8.5px 69px;
+    letter-spacing: 0.6px;
+}
+.footerForm {
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+}
+
+.footerColumn__link {
+    font-size: 16px;
+    line-height: 26px;
+    font-family: 'SF-UI-Display-Light';
+    color: white;
+}
+
+.socialIcon svg {
+    height: 25px;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.footer a {
+    text-decoration: none;
+    color: inherit;
+    position: relative;
+}
+
+/*.socialIcon ul li{
+	float: left;
+}*/
+
+@media only screen and (max-width: 1024px)
+.madeEasy, .testimonials, .ourpartner, .groupCompanie, .mobileApp, .investor, .moreInsurance, .footerLegal {
+    height: auto;
+    padding: 5% 0 7%;
+}
+
+.footerLegal {
+    width: 100%;
+    background-size: 100%;
+    background: #000000;
+    display: table;
+    padding: 10px 0;
+}
+
+.ptable {
+    vertical-align: middle;
+    display: table-cell;
+}
+.footerLegal .footer_title {
+    margin: 10px 0 30px;
+}
+.footerLegal .info {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    color: rgba(255, 255, 255, 0.36);
+    text-align: center;
+}
+
+.footerLegal .info.mt15 {
+    margin: 15px 2px 7px 0;
+}
+
+.paymentOption .logo.visa {
+    background-position: -731px -838px;
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 1.25), not all, not all, not all, only screen and (min-resolution: 200dpi), only screen and (min-resolution: 1.25dppx)
+.paymentOption .logo {
+    background-size: 1115px 1100px;
+}
+.paymentOption .logo {
+    width: 12%;
+    height: 30px;
+    text-align: center;
+    border-radius: 4px;
+    margin: 5px 4px;
+    border: solid 0.6px #dedfdf;
+    background: #ffffff url(../../images/home-v1/logos@1x.png?v=3) 0 0 no-repeat;
+    font-size: 0px;
+    max-width: 60px;
+    background-color: #fff !important;
+    background-size: 1115px 1100px;
+}
+
+.footerLegal .footer_title .h2 {
+    font-size: 18px;
+    color: #ffffff;
+    justify-content: center;
+    display: flex;
+}
+
+.paymentOption .logo.american {
+    background-position: -658px -838px;
+}
+
+.paymentOption .logo.netbanking {
+    background-position: -941px -838px;
+}
+
+.footerLegal .footer_title {
+    margin: 10px 0 30px;
+}
+
+.paymentOption {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    justify-content: center;
+}
+
+.footerForm input {
+    float: left;
+    background: none;
+    border: 1px solid #707070;
+    padding: 15px 12px;
+    max-width: 348px;
+    width: 100%;
+}
+.footerForm button svg {
+    width: 35px;
+    height: 35px;
+}
+
+svg:not(:root) {
+    overflow: hidden;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+svg:not(:root) {
+    overflow: hidden;
+}
+
+.socialIcon li {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+}
+
+.box-review{
+	height: 400px;
+	background-color: #59babd;
+}
+
+.sub-box{
+	height: 300px;
+	border: 2px solid #1CA0A4;
+	border-radius: 30px;
+	background: #FFF;
+
+}
+
+.box-re{
+	padding-top: 46px;
+}
+
+.uathich-logo {
+    border: 2px solid #1CA0A4;
+    border-radius: 22%;
+    width: 181px;
+    height: 133px;
+    position: absolute;
+    top: -58px;
+    left: 26%;
+    z-index: -1;
+    padding-left: 50px;
+    padding-top: 10px;
+
+}
+
+.main-like{
+	margin-bottom: 45px;
+}
+
+.mar-like{
+	margin-top: 60px;
+}
+
+.relati{
+	position: relative;
+}
+
+.img-company-logo{
+
+	width: 60%;
+    height: 30%;
+}
+
+.box-product:hover{
+	background-color: #1CA0A4;
+	color: #FFF;
+
+}
+.planItem:hover .span-bv{
+	color: #FFF;
+}
+
+.planItem:hover a{
+	color: #FFF;
+}
+
+.planItem i {
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    font-size: 40px;
+}
+
+.policywarp nav {
+	letter-spacing: 0!important;
+    transition: all .5s;
+    -webkit-transition: all .5s;
+    background: #fff;
+    box-shadow: 1px 1px 5px 0px rgba(0, 36, 105, 0.4);
+    z-index: 100;
+   
+    position: relative;
+}
+
+.policywarp nav .subheader {
+	min-height: 32px;
+	width: 100%
+}
+
+.policywarp nav .subheader ul.smallheader_nav {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	max-width: 750px;
+	float: right
+}
+
+.policywarp nav .subheader ul.smallheader_nav li {
+	display: inline-block;
+	float: left;
+	position: relative;
+	list-style: none
+}
+
+.policywarp nav .subheader ul.smallheader_nav li a {
+	font-size: 12px;
+	text-decoration: none;
+	color: #666;
+	padding:20px 18px 20px;
+	font-weight: 400;
+	text-transform: capitalize;
+	display: block;
+	position: relative;
+	letter-spacing: 0
+}
+.policywarp nav.fixedh .subheader ul.smallheader_nav li a {padding:10px 18px 10px;}
+.policywarp nav .subheader ul.smallheader_nav li a.download{
+	padding:20px 18px 20px 30px;
+}
+.policywarp nav.fixedh .subheader ul.smallheader_nav li a.download{
+	padding:10px 18px 10px 30px;
+}
+.policywarp nav .subheader ul.smallheader_nav li a.download:before{
+    content: '';
+    background: url(../images/home-v1/icons.svg?v=3) no-repeat;
+    background-position: -180px -64px;
+    background-size: 209px 200px;
+    height: 24px;
+    width: 14px;
+    position: absolute;
+        left:10px;
+    top: 16px;
+}
+.policywarp nav.fixedh .subheader ul.smallheader_nav li a.download:before{top: 6px;}
+nav.fixedh .mob{display: block}
+.policywarp nav.fixedh section.desktopHeader{display: none}
+.policywarp nav .subheader ul.smallheader_nav li a.tollFreeNo {
+	    padding:20px 0 20px 18px;
+    font-size: 12px;
+    font-weight: 600;
+    text-align: right;
+    margin-top: auto;
+    position: relative;
+    cursor: default;
+}
+.policywarp nav .subheader ul.smallheader_nav li a.tollFreeNo {
+	padding:20px 0 20px 18px;
+}
+.policywarp nav.fixedh .subheader ul.smallheader_nav li a.tollFreeNo {
+	padding:10px 0 10px 18px;
+}
+
+.policywarp nav .subheader ul.smallheader_nav li a.tollFreeNo svg {
+	position: absolute;
+	left: 0;
+	top: -8px
+}
+
+.policywarp nav .subheader ul.smallheader_nav li a.tollFreeNo span {
+	position: absolute;
+	font-size: 11px;
+	top: -12px;
+	text-transform: capitalize;
+	font-weight: 500
+}
+
+.policywarp nav .subheader ul.smallheader_nav li .dropdown-menu {
+	display: none;
+	position: absolute;
+	width: 200px;
+	background: #fff;
+	z-index: 1000;
+	padding: 8px 0 0;
+	right: 0;
+	left: auto;
+	margin: 0;
+	box-shadow: 1px 3px 5px #ccc;
+	border: 0;
+	border-radius: 0
+}
+
+.policywarp nav .subheader ul.smallheader_nav li .dropdown-menu:before {
+	content: "";
+	background-image: url(../images/new-home/spritesheet_home.png?v=1);
+	background-repeat: no-repeat;
+	background-position: -864px -48px;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	right: 0;
+	margin: 0 auto;
+	left: 0;
+	top: -15px
+}
+
+.policywarp nav .subheader ul.smallheader_nav li .dropdown-menu li {
+	display: block;
+	width: 100%
+}
+
+.policywarp nav .subheader ul.smallheader_nav li .dropdown-menu li a {
+	padding: 8px 18px
+}
+
+.policywarp nav .subheader ul.smallheader_nav li .dropdown-menu li a span {
+	text-transform: initial
+}
+
+.policywarp nav .subheader ul.smallheader_nav li .dropdown-menu li a:before {
+	background: 0
+}
+
+.policywarp nav .subheader ul.smallheader_nav li li {
+	display: block;
+	width: 100%;
+	border-top: 1px solid #e6e6e6;
+	padding: 3px 0
+}
+
+.policywarp nav .subheader ul.smallheader_nav li li h6 {
+	padding: 0 38px;
+	margin: 0 0 8px;
+	font-size: 14px;
+	display: block;
+	position: relative;
+	font-weight: 700
+}
+
+.policywarp nav .subheader ul.smallheader_nav li li h6:before {
+	left: 18px;
+	content: "";
+	top: 2px;
+	position: absolute;
+	background-image: url(../images/new-home/spritesheet_home.png?v=1);
+	background-repeat: no-repeat;
+	background-position: -770px -48px;
+	height: 18px;
+	width: 15px
+}
+
+.policywarp nav .subheader ul.smallheader_nav li li .number {
+	background: #f0f0f0;
+	width: 170px;
+	margin: 5px auto;
+	padding: 3px 9px;
+	border-radius: 5px;
+	cursor: pointer
+}
+
+.policywarp nav .subheader ul.smallheader_nav li li .number .bigtext {
+	font-size: 14px;
+	display: block
+}
+
+.policywarp nav .subheader ul.smallheader_nav li li .number .smalltext {
+	font-size: 11px;
+	display: block
+}
+
+.policywarp nav .subheader ul.smallheader_nav li li .number .smalltext i {
+	text-transform: uppercase;
+	font-style: normal
+}
+
+.policywarp nav .subheader ul.smallheader_nav li li .number .numbertext {
+	font-size: 16px;
+	display: block;
+	font-weight: 600;
+	margin: 3px 0 0
+}
+
+.policywarp nav .subheader ul.smallheader_nav li li .darkerbox {
+	background: #1a1a1a
+}
+
+.policywarp nav .subheader ul.smallheader_nav li li:first-child {
+	border-top: 0
+}
+
+.policywarp nav .subheader ul.smallheader_nav li:hover ul {
+	display: block
+}
+
+.policywarp nav .subheader ul.smallheader_nav li .myacc {
+	position: absolute;
+	background: #fff;
+	display: none;
+	border: 1px solid #c1bebe;
+	right: 0;
+	z-index: 1000;
+	padding: 40px 20px 10px
+}
+
+.policywarp nav .subheader ul.smallheader_nav li .myacc .h2 {
+	padding: 0;
+	margin: 0
+}
+
+.policywarp nav .subheader ul.smallheader_nav li .myacc p {
+	padding: 0;
+	margin: 0;
+	font-size: 14px;
+	color: #a3a3a3
+}
+
+.policywarp nav .subheader ul.smallheader_nav li .myacc .close {
+	position: absolute;
+	width: 30px;
+	height: 30px;
+	background: #ccc;
+	top: 7px;
+	right: 20px
+}
+
+.policywarp nav .subheader ul.smallheader_nav li .formsumbit,
+.policywarp nav .subheader ul.smallheader_nav li input,
+.policywarp nav .subheader ul.smallheader_nav li select {
+	display: block;
+	width: 100%;
+	padding: 7px;
+	margin: 10px 0;
+	box-sizing: border-box
+}
+
+.policywarp nav .subheader ul.smallheader_nav li .formsumbit {
+	background: #f68630;
+	color: #fff;
+	text-align: center;
+	padding: 13px;
+	border-radius: 5px
+}
+
+.policywarp nav .subheader ul.smallheader_nav li .formsumbit:before {
+	content: "";
+	display: none!important
+}
+
+.policywarp nav .subheader ul.smallheader_nav:after {
+	content: "";
+	clear: both
+}
+
+.policywarp nav section.desktopHeader {
+	background: rgba(228, 234, 240, .5);
+	/*border: 1px solid #ededed;*/
+	border-left: none;
+	border-right: 0;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	display: table;
+	width: 100%;
+	
+}
+.policywarp nav::after{
+	content: '';
+    border-bottom: 1px solid #ededed;
+    display: block;
+}
+.policywarp nav.fixedh section.desktopHeader_iconView{background: rgba(228, 234, 240, .5) !important;}
+.policywarp nav.fixedh section.desktopHeader_iconView {padding: 0;}
+.policywarp nav section .policybazaarlogo {
+	float: left
+}
+
+.policywarp nav section .policybazaarlogo a.pbLogo {
+	     background: url(../images/new-home/logopb.svg) no-repeat 0 12px;
+    width: 180px;
+    height: 55px;
+    display: inline-block;
+    float: left;
+    padding-top: 0px;
+    background-size: 100%;
+}
+.policywarp nav.fixedh section .policybazaarlogo a.pbLogo {
+	    background: url(../images/new-home/logopb.svg) no-repeat 0 11px;
+    width: 150px;
+    height: 38px;
+    display: inline-block;
+    float: left;
+    padding-top: 0px;
+    background-size: 100%;
+
+}
+.policywarp nav section .policynav {
+	width: 100%;
+	float: right
+}
+
+.policywarp nav section ul.nav {
+	display: inline-block;
+	padding: 0;
+	margin: 0;
+	float: left
+}
+
+.policywarp nav section ul.nav li {
+	display: inline-block;
+	float: left;
+	list-style: none;
+	position: relative;
+	background: 0
+}
+
+.policywarp nav section ul.nav li a {
+	font-size: 12px;
+	text-decoration: none;
+	color: #4d4d4d;
+	padding:14px 0px 14px;
+	margin:0px 30px;
+	font-weight: 500;
+	text-transform: capitalize;
+	display: block;
+	position: relative;
+	letter-spacing: 0;
+	white-space: normal;
+	line-height: normal;
+	background: 0;
+	border-bottom-left-radius: 8px;
+	border-bottom-right-radius: 8px;
+}
+.policywarp nav section ul.nav li:first-child a {
+	    padding: 14px 0px 14px 0px;
+    margin-right: 26px;
+        margin-left: 0;
+}
+.policywarp nav.fixedh section ul.nav li:first-child a{padding: 8px 0px 8px 0px;}
+.policywarp nav section ul.dropdown-menu li a{font-weight:500}
+.policywarp nav section ul.dropdown-menu li a:hover{color: #4280f7;}
+.policywarp nav section ul.nav li .dropdown-menu {
+	      display: none;
+    position: absolute;
+    width: 230px;
+    background: #fff;
+    z-index: 1000;
+    padding: 8px 0 15px;
+    margin: 0;
+    box-shadow: 4px 5px 9px -2px rgba(16, 16, 16, 0.18);
+    border: 0;
+    left: -15%;
+    border-bottom-left-radius: 8px;
+    top: auto;
+    right: 0;
+    margin: 0px auto;
+    border-bottom-right-radius: 8px;
+}
+.policywarp nav.fixedh section ul.nav li .dropdown-menu{
+	top:31;
+}
+.policywarp nav section ul.nav li .dropdown-menu.min {
+	width: 200px;
+    left: -7%;
+}
+.policywarp nav section ul.nav li .dropdown-menu:before {
+	content: "";
+	background-image: url(../images/new-home/spritesheet_home.png?v=1);
+	background-repeat: no-repeat;
+	background-position: -864px -48px;
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	right: 0;
+	margin: 0 auto;
+	left: 0;
+	top: -15px;display: none;
+}
+
+.policywarp nav section ul.nav li .dropdown-menu li {
+	display: block;
+	width: 100%
+}
+
+.policywarp nav section ul.nav li .dropdown-menu li a {
+	padding: 11px 15px;margin: 0px;
+}
+
+.policywarp nav section ul.nav li .dropdown-menu li a span {
+	text-transform: initial;
+	letter-spacing: 0
+}
+
+.policywarp nav section ul.nav li .dropdown-menu li a:before {
+	background: 0
+}
+
+.policywarp nav section ul.nav li:hover ul {
+	display: block
+}
+
+.policywarp nav section ul.nav li:last-child ul {
+	left: -25px;
+	padding-bottom: 0
+}
+
+.policywarp nav section ul.nav li:last-child ul li {
+	display: block;
+	width: 100%;
+	border-top: 1px solid #e6e6e6;
+	padding: 3px 0
+}
+
+.policywarp nav section ul.nav li:last-child ul li h6 {
+	padding: 0 38px;
+	margin: 0 0 8px;
+	font-size: 14px;
+	display: block;
+	position: relative
+}
+
+.policywarp nav section ul.nav li:last-child ul li h6:before {
+	left: 18px;
+	content: "";
+	top: 2px;
+	position: absolute;
+	background-image: url(../images/new-home/spritesheet_home.png?v=1);
+	background-repeat: no-repeat;
+	background-position: -770px -48px;
+	height: 18px;
+	width: 15px
+}
+
+.policywarp nav section ul.nav li:last-child ul li .number {
+	background: #f0f0f0;
+	width: 170px;
+	margin: 5px auto;
+	padding: 3px 9px;
+	border-radius: 5px;
+	cursor: pointer
+}
+
+.policywarp nav section ul.nav li:last-child ul li .number .bigtext {
+	font-size: 14px;
+	display: block
+}
+
+.policywarp nav section ul.nav li:last-child ul li .number .smalltext {
+	font-size: 11px;
+	display: block
+}
+
+.policywarp nav section ul.nav li:last-child ul li .number .smalltext i {
+	text-transform: uppercase;
+	font-style: normal
+}
+
+.policywarp nav section ul.nav li:last-child ul li .number .numbertext {
+	font-size: 16px;
+	display: block;
+	font-weight: 600;
+	margin: 3px 0 0
+}
+
+.footer .h2,
+.footer .h4 {
+	margin: 0;
+	letter-spacing: .7px;
+	text-align: center
+}
+
+.policywarp nav section ul.nav li:last-child ul li .darkerbox {
+	background: #1a1a1a
+}
+
+.policywarp nav section ul.nav li:last-child ul li:first-child {
+	border-top: 0
+}
+
+
+
+
+.fixedh section,
+.footer {
+	background: #fff!important
+}
+
+.policywarp nav section ul.nav li:last-child .dropdown-menu {
+	right: 0;
+	left: -4px
+}
+
+.policywarp nav section ul.nav:after {
+	content: "";
+	clear: both
+}
+
+.fixedh {
+	width: 100%;
+	transition: all .5s;
+	position: fixed !important;
+	box-shadow: 0 2px 6px rgba(0, 0, 0, .2);
+	animation: slide-down .7s;
+	opacity: 1;
+	z-index: 999;
+	top: 0;
+	background:#eff4fa;
+}
+
+.fixedh .subheader {
+	display: block
+}
+/*
+@keyframes slide-down {
+	0% {
+		opacity: 0;
+		transform: translateY(-100%)
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0)
+	}
+}
+
+@keyframes slide-left {
+	0% {
+		opacity: 0;
+		transform: translateX(-100%)
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0)
+	}
+}
+*/
+
+
+@media only screen 
+and (min-width: 1366px) 
+and (min-height: 1024px) 
+and (orientation: landscape) 
+and (-webkit-min-device-pixel-ratio: 2) {
+	
+	.homelanding .pageitem ul.topproducts.desktopProducts,
+	.policywarp nav section.desktopHeader {
+		display: none
+	}
+	.homelanding .pageitem ul.topproducts.mobileProducts,
+	.policywarp nav section.mobileHeader,
+	.productCol.mobileProducts {
+		display: table
+	}
+	.policywarp nav section {
+		border: 0;
+		background: #fff
+	}
+	.backtotop span {
+		width: 30px;
+		height: 30px;
+		bottom: 100px
+	}
+	.backtotop span:after {
+		top: 1px;
+		left: 13px;
+		font-size: 18px
+	}
+
+.policywarp nav section .policybazaarlogo a.pbLogo{background:    background: url(../images/new-home/logopb.svg) 0px 12px no-repeat;
+    background-size: 160px;  }
+	.homelanding .pageitem ul.topproducts.desktopProducts,
+	.policywarp nav section.desktopHeader {
+		display: none
+	}
+	.homelanding .pageitem ul.topproducts.mobileProducts,
+	.policywarp nav section.mobileHeader,
+	.productCol.mobileProducts {
+		display: table;
+		    width: 100%;
+	}
+	.policywarp nav section {
+		border: 0;
+		background: #fff
+	}
+	.myaccount {
+		    width: 30px;
+    height: 30px;
+    display: inline-block;
+    font-size: 0;
+    float: right;
+    margin: 15px 10px 0;
+    background-image: url(../images/home-v1/icons.svg?v=3);
+    background-repeat: no-repeat;
+    background-position: -56px -71px;
+    background-size: 186px 105px;
+	}
+	.policywarp nav section .policybazaarlogo a {
+		/*background: url(../images/new-home/logo_new.png?v=1) 0 6px no-repeat;*/
+		width: 160px;
+		height: 45px;
+		display: inline-block;
+		float: left;    padding-top: 2px;
+		background-size: contain
+	}
+	.humberIcon {
+		    background-image: url(../images/home-v1/icons.svg?v=3);
+    background-repeat: no-repeat;
+    background-position: -7px -68px;
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin: 10px 10px 0;
+    background-size: 186px 105px;
+	}
+	.policywarp nav .mob {
+		display: none
+	}
+	.policywarp nav ul.nav {
+		padding: 0;
+		margin: 0;
+		float: initial;
+		position: fixed;
+		width: 250px;
+		background: #fff;
+		top: 0;
+		z-index: 1002;
+		height: 100%;
+		overflow-y: scroll
+	}
+	.policywarp nav ul.nav li {
+		width: 100%
+	}
+	.policywarp nav section ul.nav li a {
+		width: 100%;
+		border-top: 1px solid #e6e6e6;
+		border-bottom: 1px solid #e6e6e6;
+		margin-top: -1px
+	}
+	.policywarp nav ul.nav li a.active {
+		background: #f9f9f9
+	}
+	.policywarp nav ul.nav li a.active:before {
+		transform: rotate(180deg);
+		transition: all .3s ease-in;
+		-webkit-transition: all .3s ease-in;
+		-moz-transition: all .3s ease-in
+	}
+	.policywarp nav ul.nav li a:before {
+		content: "";
+		background-image: url(../images/new-home/spritesheet_home.png?v=1);
+		background-repeat: no-repeat;
+		background-position: -2607px -8px;
+		display: block;
+		position: absolute;
+		width: 15px;
+		height: 15px;
+		right: 9%;
+		top: 37%
+	}
+	.policywarp nav section .policybazaarlogo a{width: 110px}
+.policywarp nav section .policybazaarlogo a svg{width: 140%}
+	.policywarp nav ul.nav .dropdown_mobile {
+		display: none;
+		padding: 0
+	}
+	.policywarp nav ul.nav .dropdown_mobile li {
+		width: 100%
+	}
+	.policywarp nav ul.nav .dropdown_mobile li a {
+		width: 100%;
+		padding: 10px 25px;
+		border: 0
+	}
+	.policywarp nav ul.nav .dropdown_mobile li a:before {
+		display: none
+	}
+	.policywarp nav ul.nav .dropdown_mobile li a:last-child {
+		padding: 10px 25px
+	}
+	.policywarp nav section .policynav {
+		width: 250px;
+		float: right;
+		position: fixed;
+		z-index: 1000;
+		height: 100%;
+		left: -290px;
+		top: 0
+	}
+	.policynav .nav li.mobileAppmenu {
+		margin-bottom: 20px;
+		background: #f3f2f2;
+		padding-bottom: 10px
+	}
+	.policynav .nav li.mobileAppmenu p {
+		display: block;
+		width: 100%;
+		padding: 5px;
+		text-align: center;
+		margin: 0;
+		font-size: 12px
+	}
+	.policynav .nav li.mobileAppmenu .appitem {
+		display: block;
+		width: 90%;
+		margin: 0 auto
+	}
+	.policynav .nav li.mobileAppmenu .appitem a {
+		float: left;
+		width: 49%;
+		display: inline-block;
+		height: 35px;
+		border: 0;
+		padding: 5px 10px
+	}
+	.policynav .nav li.mobileAppmenu .appitem a.googleplay {
+		background: url(../images/svg-icons/playstore_logo.svg) no-repeat;
+		margin-right: 3px
+	}
+	.policynav .nav li.mobileAppmenu .appitem a.ios {
+		background: url(../images/svg-icons/app_store.svg) no-repeat
+	}
+	.policynav .nav li>.applink p {
+		margin: 4px 0 0
+	}
+	.policywarp nav section ul.nav li a {
+		padding: 15px 45px 15px 25px;
+		text-transform: capitalize;
+		margin: 0;
+    border-top: none;    border-radius: 0;
+	}
+	.policywarp nav section ul.nav li a.tollFreeNo {
+		padding: 25px 0 15px;
+		text-align: center;
+		font-size: 18px;
+		font-weight: 600;
+		position: relative;
+		line-height: 25px
+	}
+	.policywarp nav section ul.nav li a.tollFreeNo span {
+		position: absolute;
+		font-size: 11px;
+		top: 5px;
+		text-transform: capitalize;
+		font-weight: 500
+	}
+	.policywarp nav section ul.nav li a.tollFreeNo svg {
+		position: absolute;
+		left: 30px;
+		top: 18px
+	}
+	.policywarp nav section ul.nav li.drawer a {
+		padding: 0;
+		border: 0
+	}
+	.policywarp nav section ul.nav li.drawer .policybazaarlogo {
+		float: none
+	}
+	.policywarp nav section ul.nav li.drawer .policybazaarlogo a {
+		background: url(../images/logo_new.png?v=1) 0 9px no-repeat;
+		display: table;
+		width: 48%;
+		height: 52px;
+		background-size: contain;
+		margin-left: 15px
+	}
+	.policywarp nav section ul.nav li.drawer .policybazaarlogo a:before {
+		display: none
+	}
+	.policywarp nav section ul.nav li:last-child a {
+		padding: 15px 45px 15px 25px
+	}
+	.policywarp nav section ul.nav li a.single:before,
+	.policywarp nav section ul.nav li:last-child a:before {
+		background: 0
+	}
+	.policywarp nav section .policybazaarlogo {
+		margin-left: 0;
+		width: auto
+	}
+	.policywarp nav section .policynav.menuslide {
+		animation: slide-left .7s;
+		opacity: 1;
+		left: 0
+	}
+
+.policynav .nav a.closenav {
+	width: 30px;
+	height: 23px;
+	background: url(../images/new-home/spritesheet_home.png?v=1) -806px -44px no-repeat;
+	position: absolute;
+	left: 210px;
+	z-index: 1002;
+	cursor: pointer;
+	top: 14px
+}
+
+.policynav .nav li.mobileAppmenu {
+	margin-bottom: 20px;
+	background: #fff;
+	padding-bottom: 10px
+}
+
+.policynav .nav li.mobileAppmenu p {
+	display: block;
+	width: 100%;
+	padding: 5px;
+	text-align: center;
+	margin: 0;
+	font-size: 12px;
+	color: inherit
+}
+
+.policynav .nav li.mobileAppmenu .appitem {
+	display: block;
+	width: 90%;
+	margin: 0 auto
+}
+
+.policynav .nav li.mobileAppmenu .appitem a {
+	float: left;
+	width: 49%;
+	display: inline-block;
+	height: 35px;
+	border: 0;
+	padding: 5px 10px
+}
+
+.policynav .nav li.mobileAppmenu .appitem a.googleplay {
+	background: url(../images/new-home/svg-icons/playstore_logo.svg) no-repeat;
+	margin-right: 3px
+}
+
+.policynav .nav li.mobileAppmenu .appitem a.ios {
+	background: url(../images/new-home/svg-icons/app_store.svg) no-repeat
+}
+
+.policynav .nav li>.applink p {
+	margin: 4px 0 0
+}
+
+.policywarp nav section ul.nav li.drawer a {
+	padding: 0
+}
+
+.policywarp nav section ul.nav li.drawer .policybazaarlogo {
+	float: none
+}
+
+.policywarp nav section ul.nav li.drawer .policybazaarlogo a {
+	background:url(../images/new-home/logopb.svg) 0 13px no-repeat;
+	display: block;
+	width: 58%;
+	height: 52px;
+	background-size: contain;
+	margin-left: 15px;
+	border: 0
+}
+
+.policywarp nav section ul.nav li.drawer .policybazaarlogo a:before {
+	display: none
+}
+
+.policywarp nav section .policybazaarlogo {
+	margin-left: 0;
+	width: auto
+}
+
+.policywarp nav section ul.nav li.active a:before {
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg)
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1 {
+	width: 100%;
+	display: block;
+	padding: 0;
+	background: #f3f2f2
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1 li {
+	display: block;
+	float: none
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1 li a {
+	border: 0;
+	padding: 10px 15px 10px 30px;
+	font-size: 13px;margin: 0px;
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1 li a:before {
+	display: none
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1 li .helpsupport {
+	background: #e6e6e6;
+	width: 65%;
+	margin: 5px 0 5px 20px;
+	padding: 3px 9px;
+	border-radius: 5px;
+	cursor: pointer
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1 li .helpsupport .bigtext {
+	font-size: 14px;
+	display: block
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1 li .helpsupport .smalltext {
+	font-size: 11px;
+	display: block
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1 li .helpsupport .smalltext i {
+	text-transform: uppercase;
+	font-style: normal
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1 li .helpsupport .numbertext {
+	font-size: 16px;
+	display: block;
+	font-weight: 600;
+	margin: 3px 0 0;
+	position: static;
+	color: inherit;
+	padding: 0
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1 li:last-child .helpsupport {
+	margin: 5px 0 0 20px
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1 li:first-child .helpsupport {
+	margin: 0 0 5px 20px
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1:after {
+	display: table;
+	clear: both;
+
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1.support {
+	padding: 10px 0
+}
+
+.made_easy a.knowmore {
+	display: none
+}
+.policywarp nav.fixedh section.desktopHeader_iconView{display: none;}
+}
+
+@media only screen and (max-width:1024px) {
+	
+	.homelanding .pageitem ul.topproducts.desktopProducts,
+	.policywarp nav section.desktopHeader {
+		display: none
+	}
+	.homelanding .pageitem ul.topproducts.mobileProducts,
+	.policywarp nav section.mobileHeader,
+	.productCol.mobileProducts {
+		display: table
+	}
+	.policywarp nav section ul.nav li a:last-child{margin: 0px;padding:14px 0px 14px 25px;}
+	.policywarp nav section {
+		border: 0;
+		background: #fff
+	}
+	.backtotop span {
+		width: 30px;
+		height: 30px;
+		bottom: 100px
+	}
+	.backtotop span:after {
+		top: 1px;
+		left: 13px;
+		font-size: 18px
+	}
+
+.policywarp nav section .policybazaarlogo a.pbLogo{background: url(../images/new-home/logopb.svg) 0px 12px no-repeat;
+    background-size: 87%;}
+	.homelanding .pageitem ul.topproducts.desktopProducts,
+	.policywarp nav section.desktopHeader {
+		display: none
+	}
+	.homelanding .pageitem ul.topproducts.mobileProducts,
+	.policywarp nav section.mobileHeader,
+	.productCol.mobileProducts {
+		display: table;width: 100%;	
+	}
+	.policywarp nav section {
+		border: 0;
+		background: #fff
+	}
+	.myaccount {
+		    width: 30px;
+    height: 30px;
+    display: inline-block;
+    font-size: 0;
+    float: right;
+    margin: 15px 10px 0;
+    background-image: url(../images/home-v1/icons.svg?v=3);
+    background-repeat: no-repeat;
+    background-position: -56px -71px;
+    background-size: 186px 105px;
+	}
+	.policywarp nav section .policybazaarlogo a {
+		/*background: url(../images/new-home/logo_new.png?v=1) 0 6px no-repeat;*/
+		width: 160px;
+		height: 45px;
+		display: inline-block;
+		float: left;    padding-top: 2px;
+		background-size: contain
+	}
+	.humberIcon {
+		    background-image: url(../images/home-v1/icons.svg?v=3);
+    background-repeat: no-repeat;
+    background-position: -7px -68px;
+    width: 40px;
+    height: 40px;
+    float: left;
+    margin: 10px 10px 0;
+    background-size: 186px 105px;
+	}
+	.policywarp nav .mob {
+		display: none
+	}
+	.policywarp nav ul.nav {
+		padding: 0;
+		margin: 0;
+		float: initial;
+		position: fixed;
+		width: 250px;
+		background: #fff;
+		top: 0;
+		z-index: 1002;
+		height: 100%;
+		overflow-y: scroll
+	}
+	.policywarp nav ul.nav li {
+		width: 100%
+	}
+	.policywarp nav section ul.nav li a {
+		width: 100%;
+		/*border-top: 1px solid #e6e6e6;*/
+		border-bottom: 1px solid #e6e6e6;
+		margin-top: -1px
+	}
+	.policywarp nav ul.nav li a.active {
+		background: #f9f9f9
+	}
+	.policywarp nav ul.nav li a.active:before {
+		transform: rotate(180deg);
+		transition: all .3s ease-in;
+		-webkit-transition: all .3s ease-in;
+		-moz-transition: all .3s ease-in
+	}
+	.policywarp nav ul.nav li a:before {
+		content: "";
+		background-image: url(../images/new-home/spritesheet_home.png?v=1);
+		background-repeat: no-repeat;
+		background-position: -2607px -8px;
+		display: block;
+		position: absolute;
+		width: 15px;
+		height: 15px;
+		right: 9%;
+		top: 37%
+	}
+	.policywarp nav section .policybazaarlogo a{width: 110px}
+.policywarp nav section .policybazaarlogo a svg{width: 140%}
+	.policywarp nav ul.nav .dropdown_mobile {
+		display: none;
+		padding: 0
+	}
+	.policywarp nav ul.nav .dropdown_mobile li {
+		width: 100%
+	}
+	.policywarp nav ul.nav .dropdown_mobile li a {
+		width: 100%;
+		padding: 10px 25px;
+		border: 0
+	}
+	.policywarp nav ul.nav .dropdown_mobile li a:before {
+		display: none
+	}
+	.policywarp nav ul.nav .dropdown_mobile li a:last-child {
+		padding: 10px 25px
+	}
+	.policywarp nav section .policynav {
+		width: 250px;
+		float: right;
+		position: fixed;
+		z-index: 1000;
+		height: 100%;
+		left: -290px;
+		top: 0
+	}
+	.policynav .nav li.mobileAppmenu {
+		margin-bottom: 20px;
+		background: #f3f2f2;
+		padding-bottom: 10px
+	}
+	.policynav .nav li.mobileAppmenu p {
+		display: block;
+		width: 100%;
+		padding: 5px;
+		text-align: center;
+		margin: 0;
+		font-size: 12px
+	}
+	.policynav .nav li.mobileAppmenu .appitem {
+		display: block;
+		width: 90%;
+		margin: 0 auto
+	}
+	.policynav .nav li.mobileAppmenu .appitem a {
+		float: left;
+		width: 49%;
+		display: inline-block;
+		height: 35px;
+		border: 0;
+		padding: 5px 10px
+	}
+	.policynav .nav li.mobileAppmenu .appitem a.googleplay {
+		background: url(../images/svg-icons/playstore_logo.svg) no-repeat;
+		margin-right: 3px
+	}
+	.policynav .nav li.mobileAppmenu .appitem a.ios {
+		background: url(../images/svg-icons/app_store.svg) no-repeat
+	}
+	.policynav .nav li>.applink p {
+		margin: 4px 0 0
+	}
+	.policywarp nav section ul.nav li a {
+		text-transform: capitalize;
+		padding: 14px 0px 14px 25px;
+		margin: 0px 0px 0px 0px;
+		border-radius: 0px;
+
+	}
+
+	.policywarp nav section ul.nav li a.tollFreeNo {
+		padding: 25px 0 15px;
+		text-align: center;
+		font-size: 18px;
+		font-weight: 600;
+		position: relative;
+		line-height: 25px
+	}
+	.policywarp nav section ul.nav li a.tollFreeNo span {
+		position: absolute;
+		font-size: 11px;
+		top: 5px;
+		text-transform: capitalize;
+		font-weight: 500
+	}
+	.policywarp nav section ul.nav li a.tollFreeNo svg {
+		position: absolute;
+		left: 30px;
+		top: 18px
+	}
+	.policywarp nav section ul.nav li.drawer a {
+		padding: 0;
+		border: 0
+	}
+	.policywarp nav section ul.nav li.drawer .policybazaarlogo {
+		float: none
+	}
+	.policywarp nav section ul.nav li.drawer .policybazaarlogo a {
+		background: url(../images/logo_new.png?v=1) 0 9px no-repeat;
+		display: table;
+		width: 48%;
+		height: 52px;
+		background-size: contain;
+		margin-left: 15px
+	}
+	.policywarp nav section ul.nav li.drawer .policybazaarlogo a:before {
+		display: none
+	}
+	.policywarp nav section ul.nav li:last-child a {
+		padding: 15px 45px 15px 25px
+	}
+	.policywarp nav section ul.nav li a.single:before,
+	.policywarp nav section ul.nav li:last-child a:before {
+		background: 0
+	}
+	.policywarp nav section .policybazaarlogo {
+		margin-left: 0;
+		width: auto
+	}
+	.policywarp nav section .policynav.menuslide {
+		animation: slide-left .7s;
+		opacity: 1;
+		left: 0
+	}
+
+.policynav .nav a.closenav {
+	width: 30px;
+	height: 23px;
+	background: url(../images/new-home/spritesheet_home.png?v=1) -806px -44px no-repeat;
+	position: absolute;
+	left: 210px;
+	z-index: 1002;
+	cursor: pointer;
+	top: 14px
+}
+
+.policynav .nav li.mobileAppmenu {
+	margin-bottom: 20px;
+	background: #fff;
+	padding-bottom: 10px
+}
+
+.policynav .nav li.mobileAppmenu p {
+	display: block;
+	width: 100%;
+	padding: 5px;
+	text-align: center;
+	margin: 0;
+	font-size: 12px;
+	color: inherit
+}
+
+.policynav .nav li.mobileAppmenu .appitem {
+	display: block;
+	width: 90%;
+	margin: 0 auto
+}
+
+.policynav .nav li.mobileAppmenu .appitem a {
+	float: left;
+	width: 49%;
+	display: inline-block;
+	height: 35px;
+	border: 0;
+	padding: 5px 10px
+}
+
+.policynav .nav li.mobileAppmenu .appitem a.googleplay {
+	background: url(../images/new-home/svg-icons/playstore_logo.svg) no-repeat;
+	margin-right: 3px
+}
+
+.policynav .nav li.mobileAppmenu .appitem a.ios {
+	background: url(../images/new-home/svg-icons/app_store.svg) no-repeat
+}
+
+.policynav .nav li>.applink p {
+	margin: 4px 0 0
+}
+
+.policywarp nav section ul.nav li.drawer a {
+	padding: 0
+}
+
+.policywarp nav section ul.nav li.drawer .policybazaarlogo {
+	float: none
+}
+
+.policywarp nav section ul.nav li.drawer .policybazaarlogo a {
+	    background: url(../images/new-home/logopb.svg) 0 13px no-repeat;
+    display: block;
+    width: 58%;
+    height: 52px;
+    background-size: contain;
+    margin-left: 15px;
+    border: 0;
+}
+
+.policywarp nav section ul.nav li.drawer .policybazaarlogo a:before {
+	display: none
+}
+
+.policywarp nav section .policybazaarlogo {
+	margin-left: 0;
+	width: auto
+}
+
+.policywarp nav section ul.nav li.active a:before {
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg)
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1 {
+	width: 100%;
+	display: block;
+	padding: 0;
+	background: #f3f2f2
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1 li {
+	display: block;
+	float: none
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1 li a {
+	border: 0;
+	padding: 10px 15px 10px 30px;
+	font-size: 13px
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1 li a:before {
+	display: none
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1 li .helpsupport {
+	background: #e6e6e6;
+	width: 65%;
+	margin: 5px 0 5px 20px;
+	padding: 3px 9px;
+	border-radius: 5px;
+	cursor: pointer
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1 li .helpsupport .bigtext {
+	font-size: 14px;
+	display: block
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1 li .helpsupport .smalltext {
+	font-size: 11px;
+	display: block
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1 li .helpsupport .smalltext i {
+	text-transform: uppercase;
+	font-style: normal
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1 li .helpsupport .numbertext {
+	font-size: 16px;
+	display: block;
+	font-weight: 600;
+	margin: 3px 0 0;
+	position: static;
+	color: inherit;
+	padding: 0
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1 li:last-child .helpsupport {
+	margin: 5px 0 0 20px
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1 li:first-child .helpsupport {
+	margin: 0 0 5px 20px
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1:after {
+	display: table;
+	clear: both;
+
+}
+
+.policywarp nav section ul.nav li .dropdown_mobile1.support {
+	padding: 10px 0
+}
+
+.made_easy a.knowmore {
+	display: none
+}
+}

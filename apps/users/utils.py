@@ -607,7 +607,7 @@ def gan_cay(user_bi_gan, user_current, pos, ref_user):
     gan_cay_ao(user_bi_gan, pos, ref_user)
     gan_cay_that(user_bi_gan, user_current)
     BV_tong_hop_dong_cho_gan  = get_bv_hop_dong_cho_gan(user_bi_gan)
-    hoa_hong_tuyen_dung(user_them_moi=user_bi_gan, BV_tong_hop_dong_cho_gan)
+    hoa_hong_tuyen_dung(user_bi_gan, BV_tong_hop_dong_cho_gan)
     hoa_hong_tuong_tro(user_bi_gan)
     travel_tree_and_update_group_commission(user_bi_gan, BV_tong_hop_dong_cho_gan)
     travel_tree_and_update_career_commission(user_bi_gan, BV_tong_hop_dong_cho_gan)

@@ -472,3 +472,9 @@ redis.exceptions.ResponseError: MISCONF Redis is configured to save RDB snapshot
   warnings.warn('Using settings.DEBUG leads to a memory leak, never '
 [2020-02-22 09:44:43,036: INFO/MainProcess] celery@8feb259fda8a ready.
 >>>>>>> 3e1ea7e79fea4b45c90f4796c3f717b00ec904f6
+[2020-02-28 01:07:10,477: INFO/MainProcess] Connected to redis://redis:6379/0
+[2020-02-28 01:07:10,494: INFO/MainProcess] mingle: searching for neighbors
+[2020-02-28 01:07:11,526: INFO/MainProcess] mingle: all alone
+[2020-02-28 01:07:11,564: WARNING/MainProcess] /usr/local/lib/python3.6/site-packages/celery/fixups/django.py:200: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+[2020-02-28 01:07:11,568: INFO/MainProcess] celery@0316f8923466 ready.

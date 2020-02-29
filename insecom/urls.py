@@ -28,7 +28,7 @@ urlpatterns = [
     path('dang-xuat/', users_views.LogoutView.as_view(), name='logout_url'),
     path('dang-nhap/', users_views.LoginView.as_view(), name='login_url'),
     path('dang-ky/', users_views.RegisterView.as_view(), name='register_url'),
-    path('/api/insert-order/', policy_views.UpdateOrderContract.as_view())
+    path('api/insert-order/', policy_views.UpdateOrderContract.as_view())
 
     #api url
 

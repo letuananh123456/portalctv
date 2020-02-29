@@ -56,8 +56,8 @@ class User(AbstractUser):
     tax_number = models.CharField(default=None, max_length=200, null=True)
     tax_address = models.CharField(max_length=200, null=True)
     position = models.IntegerField(default=0) # default 0 la trai , 1 la phai
-    reference = models.ForeignKey('User', on_delete=models.SET_NULL, null=True, blank=True)
-    sponser = models.ForeignKey('User', on_delete=models.SET_NULL, null=True, blank=True)
+    reference = models.ForeignKey('User', on_delete=models.SET_NULL, null=True, blank=True, related_name='reference')
+    sponser = models.ForeignKey('User', on_delete=models.SET_NULL, null=True, blank=True, related_name='sponser')
     status_id = models.IntegerField(default=0)
     retail_commission = models.IntegerField(default=0)
     recruitment_commission = models.IntegerField(default=0)
@@ -69,8 +69,8 @@ class User(AbstractUser):
     welfare_commission = models.IntegerField(default=0)
     policy_commission = models.IntegerField(default=0)
     bv_green = models.IntegerField(default=0)
-    id_1_sponser = models.ForeignKey('User', on_delete=models.SET_NULL, null=True, blank=True)
-    id_2_child = models.ForeignKey('User', on_delete=models.SET_NULL, null=True, blank=True)
+    id_1_sponser = models.ForeignKey('User', on_delete=models.SET_NULL, null=True, blank=True,  related_name='id_1_sponser')
+    id_2_child = models.ForeignKey('User', on_delete=models.SET_NULL, null=True, blank=True,  related_name='id_2_child')
 
     def __str__(self):
         return self.username

@@ -2,11 +2,11 @@ from django.contrib import admin
 from .models import User
 
 # Re-register UserAdmin
-class UserAAdmin(admin.ModelAdmin):
+class UserAdmin(admin.ModelAdmin):
     list_display = ('id', 'username')
 
 
-admin.site.register(User,  UserAAdmin)
+admin.site.register(User,UserAdmin)
 
 # from .models import Token, LoginHistory, Notification, UserNotification
 

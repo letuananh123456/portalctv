@@ -41,7 +41,7 @@ class User(AbstractUser):
     9: Giám đốc miền
     10: Bàn tròn triệu phú
     """
-    userid = models.CharField(max_length=200)
+
     fullname = models.CharField(max_length=200)
     sex = models.IntegerField(default=0)
     address = models.CharField(max_length=200, null=True)
@@ -53,11 +53,11 @@ class User(AbstractUser):
     cmnd_date = models.DateField(null=True)
     cmnd_address = models.CharField(max_length=200, null=True)
     city = models.IntegerField(default=0, null=True)
-    tax_number = models.CharField(default=None, max_length=200, null=True)
+    tax_number = models.CharField(max_length=200, blank=True)
     tax_address = models.CharField(max_length=200, null=True)
     position = models.IntegerField(default=0) # default 0 la trai , 1 la phai
-    reference = models.IntegerField(default=None, null=True)
-    sponser = models.IntegerField(default=None, null=True)
+    reference = models.IntegerField(default=None, null=True) # code Nguoi do dau
+    sponser = models.IntegerField(default=None, null=True) # code Nguoi gioi thieu
     status_id = models.IntegerField(default=0)
     retail_commission = models.IntegerField(default=0)
     recruitment_commission = models.IntegerField(default=0)
@@ -71,6 +71,11 @@ class User(AbstractUser):
     bv_green = models.IntegerField(default=0)
     id_1_sponser = models.IntegerField(default=0, null=True)
     id_2_child = models.IntegerField(default=0, null=True)
+    is_actif = models.BooleanField(default=False) # da KYC chua
+    link_info = models.CharField(default=None, max_length=255, null=True) # link tuyen dung cua chinh user
+    code_info = models.CharField(default=None, max_length=255, null=True) # ma code tuyen dung cua user
+    created_at = models.DateTimeField(auto_now_add=True, null=True)
+
 
     def __str__(self):
         return self.username

@@ -16,6 +16,7 @@ from django.contrib.auth import logout, login
 from django.core.cache import cache
 from apps.core.utils import get_request_hash_data, validate_response
 from django.conf import settings
+import string
 
 
 
@@ -174,3 +175,18 @@ class thongtin(View):
             'mession': "Dữ liệu của bạn đã được cập nhập thành công ",
         }
         return render(request, 'dashboard/hoso/thongtin.html',context)
+
+
+def random_string_generator(size=12, chars=string.ascii_lowercase + string.digits):
+    return ''.join(random.choice(chars) for _ in range(size))
+
+
+def unique_order_id_generator(instance):
+    order_new_id= random_string_generator()
+
+    Klass= instance.__class__
+
+    qs_exists= DonDatHang.objects.filter(code_info=order_new_id).exists()
+    if qs_exists:
+        return unique_order_id_generator(instance)
+    return order_new_id

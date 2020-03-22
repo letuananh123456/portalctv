@@ -478,3 +478,15 @@ redis.exceptions.ResponseError: MISCONF Redis is configured to save RDB snapshot
 [2020-02-28 01:07:11,564: WARNING/MainProcess] /usr/local/lib/python3.6/site-packages/celery/fixups/django.py:200: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
   warnings.warn('Using settings.DEBUG leads to a memory leak, never '
 [2020-02-28 01:07:11,568: INFO/MainProcess] celery@0316f8923466 ready.
+[2020-03-22 05:00:13,284: INFO/MainProcess] Connected to redis://redis:6379/0
+[2020-03-22 05:00:13,305: INFO/MainProcess] mingle: searching for neighbors
+[2020-03-22 05:00:14,346: INFO/MainProcess] mingle: all alone
+[2020-03-22 05:00:14,369: WARNING/MainProcess] /usr/local/lib/python3.6/site-packages/celery/fixups/django.py:200: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+[2020-03-22 05:00:14,374: INFO/MainProcess] celery@f25467d94848 ready.
+[2020-03-22 09:46:59,763: INFO/MainProcess] Connected to redis://redis:6379/0
+[2020-03-22 09:46:59,790: INFO/MainProcess] mingle: searching for neighbors
+[2020-03-22 09:47:00,826: INFO/MainProcess] mingle: all alone
+[2020-03-22 09:47:00,847: WARNING/MainProcess] /usr/local/lib/python3.6/site-packages/celery/fixups/django.py:200: UserWarning: Using settings.DEBUG leads to a memory leak, never use this setting in production environments!
+  warnings.warn('Using settings.DEBUG leads to a memory leak, never '
+[2020-03-22 09:47:00,848: INFO/MainProcess] celery@a8fe1612d92b ready.

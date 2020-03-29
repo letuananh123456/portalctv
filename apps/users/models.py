@@ -69,9 +69,18 @@ class User(AbstractUser):
     welfare_commission = models.IntegerField(default=0)
     policy_commission = models.IntegerField(default=0)
     bv_green = models.IntegerField(default=0)
-    id_1_sponser = models.IntegerField(default=0, null=True)
-    id_2_child = models.IntegerField(default=0, null=True)
-    is_actif = models.BooleanField(default=False) # da KYC chua
+    id_1_sponser = models.IntegerField(default=0, null=True)# nhanh nguoi gioi thieu
+    id_2_child = models.IntegerField(default=0, null=True)# nhanh tu tuyen ra
+    images_cmt_mattruoc = models.ImageField(upload_to = 'images_cmt_mattruoc', null=True, default=None)
+    images_cmt_matsau = models.ImageField(upload_to = 'images_cmt_matsau', null=True, default=None)
+    images_cmt_selfie_cong_cmnd = models.ImageField(upload_to = 'images_cmt_selfie_cong_cmnd', null=True, default=None)
+    images_cmt_the_ca_nhan = models.ImageField(upload_to = 'images_cmt_the_ca_nhan', null=True, default=None)
+    images_hopdongctv = models.ImageField(upload_to = 'images_hopdongctv', null=True, default=None)
+    is_hopdong_congtacvien = models.BooleanField(default=False) # Da ky hop dong cong tac vien hay chua
+    resend_hopdongCTV = models.BooleanField(default=False)
+    is_KYC = models.BooleanField(default=False) # da xac minh tai khoan chua 
+    resend_KYC = models.BooleanField(default=False) # yeu cau gui lai anh xac minh lai
+    is_actif = models.BooleanField(default=False) # co con hoat dong nua khong, co vi pham chinh sach cua cong ty khong, xanh là actif, vàng là actif nhưng chưa gửi hợp đồng CTV chữ ký tay, đỏ là chưa actif vi phạm chính sách công ty hoặc chưa KYC
     link_info = models.CharField(default=None, max_length=255, null=True) # link tuyen dung cua chinh user
     code_info = models.CharField(default=None, max_length=255, null=True) # ma code tuyen dung cua user
     created_at = models.DateTimeField(auto_now_add=True, null=True)

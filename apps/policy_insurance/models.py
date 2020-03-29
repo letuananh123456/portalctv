@@ -1,6 +1,6 @@
 from django.db import models
 from apps.users.models import User
-from apps.core.models import CONG_TY_BAO_HIEM, TRANG_THAI_THANH_TOAN
+# from apps.core.models import CONG_TY_BAO_HIEM, TRANG_THAI_THANH_TOAN
 from apps.convert_product.models import ConvertProduct
 # Create your models here.
 
@@ -16,7 +16,7 @@ class LifeProduct(models.Model):
     fullname = models.CharField(max_length=200)
     number_YCBH = models.CharField(max_length=200)
     number_policy = models.CharField(max_length=200)
-    company = models.IntegerField(choices=CONG_TY_BAO_HIEM) 
+    # company = models.IntegerField(choices=CONG_TY_BAO_HIEM) 
     name_product = models.CharField(max_length=200)
     type_product = models.ForeignKey(ConvertProduct, default=None, null=True, on_delete=models.SET_NULL)
     sumit_date = models.DateField()
@@ -26,7 +26,7 @@ class LifeProduct(models.Model):
     status_policy = models.IntegerField(default=0)
     premium = models.IntegerField(default=0) # số tiền của hợp đồng
     bv_premium = models.IntegerField(default=0)
-    status_payment = models.IntegerField(default=0, choices=TRANG_THAI_THANH_TOAN)
+    # status_payment = models.IntegerField(default=0, choices=TRANG_THAI_THANH_TOAN)
     certificate = models.FileField(upload_to='uploads/', null=True, default=None)
     is_rewarded = models.BooleanField(default=False) #  biến check xem tính thưởng chưa
     created_date = models.DateTimeField(auto_now_add=True)

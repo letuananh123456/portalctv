@@ -42,33 +42,36 @@ class User(AbstractUser):
     10: Bàn tròn triệu phú
     """
 
-    fullname = models.CharField(max_length=200)
-    sex = models.IntegerField(default=0)
-    address = models.CharField(max_length=200, null=True)
-    datecreate =  models.DateField(auto_now=True, null=True)
-    dob =  models.DateField(null=True)
-    level = models.IntegerField(default=0) #level là cộng tác viên, trưởng phòng, ...
-    personal_points = models.IntegerField(default=0)
-    cmnd_number = models.CharField(default=None, max_length=200, null=True)
-    cmnd_date = models.DateField(null=True)
-    cmnd_address = models.CharField(max_length=200, null=True)
-    city = models.IntegerField(default=0, null=True)
+    fullname = models.CharField(max_length=200, default=None, null=True)
+    birth_day = models.IntegerField(default=0)
+    birth_month = models.IntegerField(default=0)
+    birth_year = models.IntegerField(default=0)
+    gioi_tinh = models.IntegerField(default=0)
+    email = models.CharField(max_length=200, default=None, null=True)
+    dia_chi_tinh_thanh_pho = models.CharField(max_length=200, default=None, null=True)
+    dia_chi_quan_huyen = models.CharField(max_length=200, default=None, null=True)
+    dia_chi_chi_tiet = models.CharField(max_length=200, default=None, null=True)
+    so_cmnd = models.CharField(max_length=200, default=None, null=True)
+    cmt_ngay_cap = models.DateField(null=True)
+    cmt_noi_cap = models.CharField(max_length=200, default=None, null=True)
     tax_number = models.CharField(max_length=200, blank=True)
     tax_address = models.CharField(max_length=200, null=True)
+    level = models.IntegerField(default=0) #level là cộng tác viên, trưởng phòng, ...
+    personal_points = models.IntegerField(default=0)
     position = models.IntegerField(default=0) # default 0 la trai , 1 la phai
     reference = models.IntegerField(default=None, null=True) # code Nguoi do dau
     sponser = models.IntegerField(default=None, null=True) # code Nguoi gioi thieu
     status_id = models.IntegerField(default=0)
-    retail_commission = models.IntegerField(default=0)
-    recruitment_commission = models.IntegerField(default=0)
-    mutual_commissions = models.IntegerField(default=0)
-    group_commissions = models.IntegerField(default=0)
-    group_commissions2 = models.IntegerField(default=0)
-    career_commission = models.IntegerField(default=0)
-    career_commission2 = models.IntegerField(default=0)
-    welfare_commission = models.IntegerField(default=0)
-    policy_commission = models.IntegerField(default=0)
-    bv_green = models.IntegerField(default=0)
+    retail_commission = models.BigIntegerField(default=0)
+    recruitment_commission = models.BigIntegerField(default=0)
+    mutual_commissions = models.BigIntegerField(default=0)
+    group_commissions = models.BigIntegerField(default=0)
+    group_commissions2 = models.BigIntegerField(default=0)
+    career_commission = models.BigIntegerField(default=0)
+    career_commission2 = models.BigIntegerField(default=0)
+    welfare_commission = models.BigIntegerField(default=0)
+    policy_commission = models.BigIntegerField(default=0)
+    bv_green = models.BigIntegerField(default=0)
     id_1_sponser = models.IntegerField(default=0, null=True)# nhanh nguoi gioi thieu
     id_2_child = models.IntegerField(default=0, null=True)# nhanh tu tuyen ra
     images_cmt_mattruoc = models.ImageField(upload_to = 'images_cmt_mattruoc', null=True, default=None)

@@ -102,23 +102,6 @@ s = 0
 
 """
 
-class MaGiamGia(models.Model):
-    loai_hinh_bao_hiem = models.IntegerField(default=0)
-    cong_ty = models.IntegerField(default=0)
-    goi_san_pham = models.IntegerField(default=0)
-    ngay_hieu_luc = models.DateField()
-    ngay_ket_thuc = models.DateField()
-    discount = models.FloatField(default=0.0)
-    id_ma_giam_gia = models.CharField(max_length=255)
-    is_su_dung = models.BooleanField(default=True)
-
-    def __str__(self):
-        return str(self.id)
-
-    class Meta:
-        verbose_name = 'Mã giảm giá '
-        verbose_name_plural = 'Mã giảm giá'
-
 
 class DonDatHang(models.Model):
     loai_hinh_bao_hiem = models.IntegerField(default=0)
@@ -129,19 +112,13 @@ class DonDatHang(models.Model):
     so_phi_phu = models.BigIntegerField(default=0)
     so_phi_VAT = models.BigIntegerField(default=0)
     tong_phi_thanh_toan = models.BigIntegerField(default=0)
-    tong_phi_thanh_toan_sau_giam_gia = models.BigIntegerField(default=0)
     created_at = models.DateTimeField(auto_now_add=True, null=True)
     loai_thanh_toan = models.IntegerField(default=0)
     ma_don_hang_bihama = models.CharField(max_length=255, unique=True)
-    ma_don_hang_doi_tac = models.CharField(default=None, max_length=255, null=True)
     ma_hop_dong = models.CharField(default=None, max_length=255, null=True)
     link_giay_chung_nhan = models.CharField(default=None, max_length=255, null=True)
     tinh_trang_don_dat_hang = models.IntegerField(default=0) # dùng để binding ra mà hình quản lý đơn hàng
-    tinh_trang_thanh_toan_cong_thanh_toan = models.IntegerField(default=0) 
-    magiamgia = models.ForeignKey(MaGiamGia, on_delete=models.SET_NULL, null=True)
     nguoimuabaohiem = models.ForeignKey(NguoiMuaBaoHiem, on_delete=models.CASCADE)
-    is_da_gui_san_bihama = models.BooleanField(default=False)
-    is_da_gui_cty_baohiem = models.BooleanField(default=False)
     
 
 
